@@ -1,0 +1,417 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"add",
+				"addEventListener"
+			],
+			[
+				"inli",
+				"inline-block"
+			],
+			[
+				"a",
+				"a"
+			],
+			[
+				"I",
+				"IOException"
+			],
+			[
+				"check",
+				"checkPalindrome"
+			],
+			[
+				"Input",
+				"InputStreamReader"
+			],
+			[
+				"remo",
+				"removedString"
+			],
+			[
+				"String",
+				"StringBuilder"
+			],
+			[
+				"fl",
+				"fl"
+			],
+			[
+				"ub",
+				"ubToi"
+			],
+			[
+				"dat",
+				"dataps"
+			],
+			[
+				"CAP_PROP",
+				"CAP_PROP_BUFFERSIZE"
+			],
+			[
+				"output",
+				"output_pred"
+			],
+			[
+				"hi",
+				"hidden_pred"
+			],
+			[
+				"com",
+				"combined_label"
+			],
+			[
+				"la",
+				"label_left"
+			],
+			[
+				"lab",
+				"label_right"
+			],
+			[
+				"c",
+				"combined_data"
+			],
+			[
+				"frin",
+				"fringeset"
+			],
+			[
+				"re",
+				"reg_theta1"
+			],
+			[
+				"reg_",
+				"reg_theta1"
+			],
+			[
+				"j",
+				"jpart1"
+			],
+			[
+				"D",
+				"DEL2"
+			],
+			[
+				"S",
+				"shape"
+			],
+			[
+				"the",
+				"theta1"
+			],
+			[
+				"y",
+				"y"
+			],
+			[
+				"no",
+				"no_of_weights1"
+			],
+			[
+				"inpu",
+				"input_layer_size"
+			],
+			[
+				"rand",
+				"rand_weights"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "pack",
+		"selected_items":
+		[
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 211.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/F/html and css files/30 days/index.html",
+		"/F/html and css files/udemy files/from html5 and css3 tutorial/two-four/index.html",
+		"/F/javascript files/web developer bootcamp/Scorekeeper/myScript.js",
+		"/F/javascript files/web developer bootcamp/Scorekeeper/myScoreKeeper.html",
+		"/F/html and css files/udemy files/from html5 and css3 tutorial/two-four/style.css",
+		"/F/html and css files/udemy files/from html5 and css3 tutorial/one/index.html",
+		"/F/html and css files/udemy files/from html5 and css3 tutorial/one/one.html",
+		"/F/study stuffs/EDX/Artificial Intelligence/projects/project 1/new/final.py",
+		"/F/study stuffs/EDX/Artificial Intelligence/projects/project 1/new/output.txt",
+		"/F/javascript files/understanding weird parts/1/app.js",
+		"/F/javascript files/understanding weird parts/1/index.html",
+		"/F/html, css and javascript files/javascript/practical javascript/index.html",
+		"/F/html, css and javascript files/javascript/practical javascript/script.js",
+		"/F/html, css and javascript files/javascript/web developer bootcamp/jQuery Todo list/assets/js/todos.js",
+		"/F/java files/PrimeCheck.java",
+		"/F/java files/eclipse-projects/Java Algoritms and Data Structures/src/Sorting/MergeSort.java",
+		"/F/java files/eclipse-projects/Java Algoritms and Data Structures/src/Sorting/Recursion.java",
+		"/F/java files/eclipse-projects/Java Algoritms and Data Structures/src/Sorting/InsertionSort.java",
+		"/F/java files/eclipse-projects/Java Algoritms and Data Structures/src/Sorting/SelectionSort.java",
+		"/F/java files/eclipse-projects/Java Algoritms and Data Structures/src/binaryTrees/Heap2.java",
+		"/F/java files/eclipse-projects/Java Algoritms and Data Structures/src/binaryTrees/BinaryTree2.java",
+		"/F/java files/eclipse-projects/Java Algoritms and Data Structures/src/binaryTrees/BinaryTree.java",
+		"/F/java files/eclipse-projects/Java Algoritms and Data Structures/src/hashTables/HashFunction3.java",
+		"/F/java files/eclipse-projects/Java Algoritms and Data Structures/src/hashTables/HashFunction2.java",
+		"/F/java files/eclipse-projects/Java Algoritms and Data Structures/src/hashTables/HashFunction.java",
+		"/F/java files/eclipse-projects/Java Algoritms and Data Structures/src/others/BigONotation.java",
+		"/F/java files/eclipse-projects/Java Algoritms and Data Structures/src/Sorting/QuickSort.java",
+		"/F/java files/eclipse-projects/Java Algoritms and Data Structures/src/Sorting/Partitioning.java",
+		"/F/java files/eclipse-projects/Java Algoritms and Data Structures/src/Sorting/BarExample.java",
+		"/F/java files/eclipse-projects/Java Algoritms and Data Structures/src/Sorting/ShellSort.java",
+		"/F/java files/eclipse-projects/Java Algoritms and Data Structures/src/linkedLists/MergeSort.java",
+		"/F/java files/eclipse-projects/Java Algoritms and Data Structures/src/linkedLists/Recursion.java",
+		"/F/java files/eclipse-projects/Java Algoritms and Data Structures/src/linkedLists/DoubleEndedLinkedList.java",
+		"/F/java files/eclipse-projects/Java Algoritms and Data Structures/src/linkedLists/Link.java",
+		"/F/java files/eclipse-projects/TestProject/src/practice/Practice1.java",
+		"/F/study stuffs/programming interview questions/links",
+		"/F/java files/Test.java",
+		"/F/html files/index.html",
+		"/C/Users/arun/Desktop/code to send/functions_used.py",
+		"/C/Users/arun/Desktop/code to send/final implementation.py",
+		"/C/Users/arun/Desktop/code to send/network_trainer.py",
+		"/F/study stuffs/college related/project/codes for raspberry pi/motor running program/functions_used.py",
+		"/F/study stuffs/college related/project/images from pi camera/set3_100_100 sliced/combine 1, 2 and pulchowk/training/training with only 100 hidden layers reg param is 3/network_trainer.py",
+		"/F/study stuffs/college related/project/images from pi camera/set3_100_100 sliced/combine 1, 2 and pulchowk/training/training with only 70 hidden layers reg param is 3/training with 70 hidden layers and reg_parameter 3.py",
+		"/F/study stuffs/college related/project/images from pi camera/set3_100_100 sliced/combined from 1 and 2/all combined 1 and 2 data/train_on combined_data/training with only 100 hidden layers reg param is 3/test_and_run_trained_weights.py",
+		"/F/study stuffs/college related/project/images from pi camera/set3_100_100 sliced/combine 1, 2 and pulchowk/training/training with only 70 hidden layers reg param is 3/test set test.py",
+		"/F/study stuffs/college related/project/codes for raspberry pi/motor running program/pi thread_3.py",
+		"/F/study stuffs/college related/project/images from pi camera/set3_100_100 sliced/combine 1, 2 and pulchowk/training/training with only 70 hidden layers reg param is 3/functions_used.py",
+		"/F/study stuffs/college related/project/images from pi camera/set3_100_100 sliced/combined from 1 and 2/all combined 1 and 2 data/train_on combined_data/training with only 100 hidden layers reg param is 3/just load and display data.py",
+		"/F/study stuffs/college related/project/images from pi camera/dark and pulchowk/all data/training/100/training_program_100_reg3.py",
+		"/F/study stuffs/college related/project/images from pi camera/dark and pulchowk/all data/training/70/training with 70 hidden layers and reg_parameter 3.py",
+		"/F/study stuffs/college related/project/images from pi camera/dark and pulchowk/all data/combine_all_three.py",
+		"/F/study stuffs/college related/project/images from pi camera/dark and pulchowk/rt slice/image to data.py",
+		"/F/study stuffs/college related/project/images from pi camera/dark and pulchowk/sliced straight/image to data.py",
+		"/F/study stuffs/college related/project/images from pi camera/dark and pulchowk/slice left/image to data.py",
+		"/C/Users/arun/Desktop/datapulchowk/final/final combined/training/training with 70 hidden layers and reg_parameter 4.py",
+		"/C/Users/arun/Desktop/datapulchowk/final/final combined/combine_all_three.py",
+		"/C/Users/arun/Desktop/dark/right/slice image.py",
+		"/C/Users/arun/Desktop/datapulchowk/final/final combined/training/training with 70 hidden layers and reg_parameter 3.py",
+		"/C/Users/arun/Desktop/dark/left/slice image.py",
+		"/C/Users/arun/Desktop/dark/slice image.py",
+		"/F/python files/opencv/sentdex/seventh.py",
+		"/F/python files/opencv/sentdex/third.py",
+		"/F/python files/opencv/sentdex/fifth.py",
+		"/F/study stuffs/college related/project/codes for threading/FPS.py",
+		"/F/study stuffs/college related/project/codes for raspberry pi/motor running program/car runner.py",
+		"/H/pi thread_3.py",
+		"/F/study stuffs/college related/project/codes for raspberry pi/motor running program/pi thread.py",
+		"/F/study stuffs/college related/project/codes for threading/pi thread.py",
+		"/H/New folder/new pi thread.py",
+		"/F/study stuffs/college related/project/project notes",
+		"/H/pi thread.py",
+		"/F/study stuffs/college related/project/codes for threading/WebCamVideoStream.py",
+		"/F/study stuffs/college related/project/codes for threading/webcam fps.py",
+		"/F/study stuffs/college related/project/images from pi camera/set3_100_100 sliced/combine 1, 2 and pulchowk/training/training with only 100 hidden layers reg param is 3/training_program.py",
+		"/F/python files/threading.py",
+		"/F/study stuffs/college related/project/images from pi camera/set3_100_100 sliced/combine 1, 2 and pulchowk/combine_all.py",
+		"/F/python files/opencv/getting started/image_second.py",
+		"/F/study stuffs/college related/project/images from pi camera/set3_100_100 sliced/combined from 1 and 2/all combined 1 and 2 data/combine_all_three.py",
+		"/F/study stuffs/college related/project/images from pi camera/set3_100_100 sliced/combined from 1 and 2/3 combined datas(100x100) from 1 and 2/combined right 1 and 2/image to data(right).py",
+		"/F/study stuffs/college related/project/images from pi camera/set3_100_100 sliced/combined from 1 and 2/3 combined datas(100x100) from 1 and 2/combined left 1 and 2/image to data(left).py",
+		"/C/Users/arun/Desktop/datapulchowk/final left sliced/image to data.py",
+		"/C/Users/arun/Desktop/datapulchowk/final right sliced/image to data.py",
+		"/C/Users/arun/Desktop/datapulchowk/final straight sliced/image to data.py",
+		"/F/study stuffs/college related/project/images from pi camera/set2_200_150 sliced/lf sliced/image to data(left).py",
+		"/F/study stuffs/college related/project/images from pi camera/image to data.py",
+		"/F/study stuffs/college related/project/New folder/AutoRCCar-master/raspberryPi/stream_client.py",
+		"/F/study stuffs/college related/project/New folder/AutoRCCar-master/README.md",
+		"/F/study stuffs/college related/project/New folder/AutoRCCar-master/computer/rc_driver.py",
+		"/F/study stuffs/college related/project/New folder/AutoRCCar-master/raspberryPi/README.md",
+		"/F/study stuffs/college related/project/codes for raspberry pi/test1.py",
+		"/C/Users/arun/Desktop/sample1/read.py",
+		"/F/study stuffs/college related/project/images from pi camera/set3_100_100 sliced/combined from 1 and 2/all combined 1 and 2 data/train_on combined_data (copy to do testing)/training with only 100 hidden layers reg param is 3/test_and_run_trained_weights.py",
+		"/F/python files/opencv/getting started/video_flip.py",
+		"/C/Users/arun/Desktop/sample/read.py",
+		"/F/python files/opencv/getting started/video_first.py",
+		"/F/study stuffs/college related/project/images from pi camera/set3_100_100 sliced/combined from 1 and 2/all combined 1 and 2 data/train_on combined_data (copy to do testing)/training with 70 hidden layers and reg_parameter 3.py",
+		"/F/study stuffs/college related/project/images from pi camera/set3_100_100 sliced/combined from 1 and 2/all combined 1 and 2 data/train_on combined_data (copy to do testing)/training with only 100 hidden layers reg param is 3/training_program.py",
+		"/F/python files/opencv/getting started/image_first.py",
+		"/F/python files/opencv/sentdex/second.py",
+		"/F/python files/opencv/sentdex/first.py",
+		"/C/Users/arun/Desktop/sample1/sample.py",
+		"/C/Users/arun/Desktop/sample/sample.py",
+		"/C/Users/arun/Desktop/datapulchowk/right/slice image.py",
+		"/F/study stuffs/college related/project/images from pi camera/set3_100_100 sliced/combined from 1 and 2/all combined 1 and 2 data/train_on combined_data (copy to do testing)/test set test.py",
+		"/C/Users/arun/Desktop/datapulchowk/left/newleft/slice image.py",
+		"/C/Users/arun/Desktop/datapulchowk/left/slice image.py",
+		"/C/Users/arun/Desktop/datapulchowk/slice image.py",
+		"/C/Users/arun/Desktop/datapulchowk/testtwo.py",
+		"/F/study stuffs/college related/project/images from pi camera/set3_100_100 sliced/combined from 1 and 2/all combined 1 and 2 data/train_on combined_data (copy to do testing)/training with only 100 hidden layers reg param is 3/test set test.py",
+		"/F/study stuffs/college related/project/images from pi camera/set3_100_100 sliced/combined from 1 and 2/all combined 1 and 2 data/train_on combined_data (copy to do testing)/test_and_run_trained_weights.py",
+		"/C/Users/arun/Desktop/testset/st/test set sliced/combine_all_three.py",
+		"/F/study stuffs/college related/project/images from pi camera/later datas/new_data/new_100_100/left/slice image.py",
+		"/C/Users/arun/Desktop/testset/st/test set sliced/left/image to data/image to data(left).py",
+		"/C/Users/arun/Desktop/testset/slice image.py",
+		"/C/Users/arun/Desktop/testset/st/test set sliced/right/image to data/image to data(right).py",
+		"/C/Users/arun/Desktop/testset/st/test set sliced/image to data(straight).py",
+		"/C/Users/arun/Desktop/testset/st/slice image.py",
+		"/C/Users/arun/Desktop/testset/st/test set sliced/left/image to data/image to data(right).py",
+		"/C/Users/arun/Desktop/testset/st/test set sliced/right/image to data/image to data(straight).py",
+		"/F/study stuffs/college related/project/images from pi camera/set3_100_100 sliced/combined from 1 and 2/all combined 1 and 2 data/train_on combined_data/training with only 100 hidden layers reg param is 3/training_program.py",
+		"/F/study stuffs/college related/project/images from pi camera/set3_100_100 sliced/combined from 1 and 2/all combined 1 and 2 data/train_on combined_data/training with 70 hidden layers and reg_parameter 3.py",
+		"/F/study stuffs/college related/project/images from pi camera/set3_100_100 sliced/combined from 1 and 2/all combined 1 and 2 data/train_on combined_data/functions_used.py",
+		"/F/study stuffs/college related/project/images from pi camera/set3_100_100 sliced/combined from 1 and 2/all combined 1 and 2 data/train_on combined_data/training with only 100 hidden layers reg param is 2/test_and_run_trained_weights.py",
+		"/F/study stuffs/college related/project/images from pi camera/set3_100_100 sliced/combined from 1 and 2/all combined 1 and 2 data/train_on combined_data/test_and_run_trained_weights.py",
+		"/F/study stuffs/college related/project/images from pi camera/set3_100_100 sliced/combined from 1 and 2/all combined 1 and 2 data/train_on combined_data/training_program.py",
+		"/F/study stuffs/college related/project/images from pi camera/set3_100_100 sliced/combined from 1 and 2/all combined 1 and 2 data/train_on combined_data/training with 70 hidden layers and reg_parameter 2.py",
+		"/F/study stuffs/college related/project/images from pi camera/set3_100_100 sliced/combined from 1 and 2/all combined 1 and 2 data/train_on combined_data/training with 70 hidden layers.py"
+	],
+	"find":
+	{
+		"height": 30.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 30.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/Python/Python.sublime-build",
+	"project": "index.sublime-project",
+	"replace":
+	{
+		"height": 56.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

@@ -1,0 +1,87 @@
+.header-top{
+    height: 85px;
+}
+
+.header-top .header-top-container, .header-bottom .header-bottom-container{
+    width: 938px;
+    margin: 0 auto;
+}
+
+header-bottom{
+    height: 40px;
+}
+
+.body-container{
+    width: 938px;
+    margin: 0 auto;
+}
+
+.body-container .body-left{
+    width: 194px;
+    float: left;
+}
+
+.body-container .body-right{
+    float: right;
+}
+
+.body-container .body-right .main{
+    width: 518px;
+    float: left;
+}
+
+.body-container .body-right .main .submain{
+    width: 100%;
+}
+
+.body-container .body-right .main .submain .tabhead{
+    width: 100%;
+    height: 65px;
+}
+
+.body-container .body-right .main .submain .tabhead .tabhead-top{
+    width: 100%;
+    font-size: 12px;
+    font-weight: bold;
+    padding-top: 12px;
+    padding-bottom: 11px;
+}
+
+.body-container .body-right .main .submain .tabhead .tabhead-top .tabhead1{
+    width: 50%; 
+}
+
+.body-container .body-right .main .submain .tabhead .tabhead-top .tabhead2{
+    width: 50%;
+}
+
+.body-container .body-right .main .submain .tabhead .tabhead-bottom{
+    width: 100%;
+}
+
+.body-container .body-right .main .submain .tabhead .tabhead-bottom .bottom-left{
+    width: 50%;
+}
+
+.body-container .body-right .main .submain .tabhead .tabhead-bottom .bottom-right{
+    width: 50%;
+}
+
+.body-container .body-right .main .submain .tabBody{
+    width: 100%;
+    /*margin-top: */
+}
+
+.body-container .body-right .rightmenu{
+    width: 176px;
+    float: right;
+}
+
+.footer-wrapper{
+    height: 45px;
+}
+
+.footer-container{
+    width: 938px;
+    margin: 0 auto;
+}
