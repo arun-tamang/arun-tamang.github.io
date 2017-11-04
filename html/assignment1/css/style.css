@@ -95,7 +95,6 @@ a{
     margin-bottom: 6px;
     font-size: 15px;
     font-family:arial;
-    /*letter-spacing: 0.5px;*/
 }
 
 .header-top-container .user-info ul{
@@ -215,11 +214,6 @@ a{
     font-size: 11px;
     font-weight: bold;
     line-height: 1.5em;
-    /*letter-spacing: 0.04px*/
-}
-
-.body-container .body-left ul li a{
-    /*display: block;*/
 }
 
 #download1, #download2{
@@ -234,18 +228,12 @@ a{
 }
 
 .body-container .body-left .downloads li a.download{
-    /*display: block;*/
-    /*float: left;*/
     display: inline-block;
-    /* a is inline and inline elementes don't have width.
-    So to give it width its diplay needs to be changed*/
     width: 96px;
 }
 
 .body-container .body-left li span.burger{
-    /*display: block;*/
     float: right;
-    /*vertical-align: middle;*/
     margin-right: 14px;
     margin-top: 1px;
 }
@@ -272,7 +260,6 @@ a{
 
 .body-container .body-right .main h1{
     font-size: 30px;
-    /*margin-top: 1px;*/
     margin-bottom: 13px;
     line-height: 0px;
     padding-top: 11px;
@@ -283,7 +270,7 @@ a{
     list-style: none;
 }
 
-.body-container .body-right .main .submain .tabhead{ 
+.body-container .body-right .main .submain .tabhead{
     background-image: url('../images/below-Entries.png');
     background-repeat: no-repeat;
     background-size: cover;
@@ -315,11 +302,9 @@ a{
 
 .body-container .body-right .main .submain .tabhead .tabhead-bottom .bottom-left{
 	float: left;
-	/*background-color: green;*/
 }
 .body-container .body-right .main .submain .tabhead .tabhead-bottom .bottom-right{
 	float: right;
-	/*background-color: yellow;*/
 }
 
 .body-container .body-right .main .submain .tabhead-bottom .bl{
@@ -363,7 +348,6 @@ a{
 .body-container .body-right .main .submain .tabBody .item{
 	padding-top: 15px;
 	padding-bottom: 9px;
-	/*Padding is preferred to margin when floated elements are involved.*/
     border-bottom: 1px solid #d8d8d8;
 }
 
@@ -385,9 +369,6 @@ a{
 }
 
 .body-container .body-right .main .submain .tabBody .item a{
-	/*Notice how i have left out .details to decrease specificity or
-	else this arctic blue like color would have overriden green and
-	red colors for anchor tags below*/
     color: #4faec0;
     font-weight: bold;
 }
@@ -468,7 +449,6 @@ a{
     margin: 0 auto;
     padding-bottom: 16px;
     padding-top: 16px;
-    /*letter-spacing: 0.5px;*/
 }
 
 .footer-container ul.footer-menu{
@@ -481,13 +461,8 @@ a{
 
 .footer-container ul.footer-menu li a{
     display: block;
-    /*with display block a will be centered vertically inside its
-    container which is an li in this case. With this the bullet
-    image will also be vertically in the middle of the a tag inside
-    the li.*/
     color: white;
     font-size: 9px;
-    /*background-color: green;*/
 }
 
 .footer-container .footer-menu li:not(:first-child){

@@ -13,35 +13,28 @@
 }
 
 header-bottom{
-    /*height: 40px;*/
     height: 2.5rem;
 }
 
 .body-container{
-    /*width: 938px;*/
     max-width: 58.625rem;
     width: 100%;
     margin: 0 auto;
 }
 
 .body-container .body-left{
-    /*width: 194px;*/
     width: 20.6823027719%;
     float: left;
 }
 
 .body-container .body-right{
     float: right;
-    /*width: 744px;*/
     width: 79.3176972281%;
 }
 
 .body-container .body-right .main{
-    /*width: 518px;*/
     width: 69%;
-    /*width: 55.223880597%;*/
     float: left;
-    /*border: 0.3px solid red;*/
 }
 
 .body-container .body-right .main .submain{
@@ -83,24 +76,19 @@ header-bottom{
 
 .body-container .body-right .main .submain .tabBody{
     width: 100%;
-    /*margin-top: */
 }
 
 .body-container .body-right .rightmenu{
-    /*width: 176px;*/
     width: 23.6559139785%;
     float: right;
 }
 
 .footer-wrapper{
-    height: 45px;
+    height: 2.8125rem;
 }
 
 .footer-container{
-    /*width: 938px;*/
     max-width: 58.625rem;
     width: 100%;
     margin: 0 auto;
-    /*border: 0.3px solid red;*/
-
 }
