@@ -1,0 +1,286 @@
+@media only screen and (max-width: 375px){
+
+    .main-container-wrapper{
+        width: 100%;
+    }
+
+    .header-wrapper{
+		width: 100%;
+	}
+
+    .header-top{
+        height: auto;
+    }
+
+    .header-top-container, .header-bottom-container, .body-container, .footer-container{
+    	width: 100%;
+    }
+
+	.header-top-container .logo-wrapper{
+	    display: block;
+	    width: 25%;
+	    margin-top: -1rem;
+        /*background-color: green;*/
+	}
+
+	.header-top-container .logo-wrapper img{
+	    width: 100%;
+	    margin: 0;
+	    display: block;
+	}
+
+	.header-top-container .search-wrapper{
+	    float: right;
+	    width: 70%;
+	    height: 1.35rem;
+        margin-top: -1rem;
+	}
+
+	.header-top-container .user-info{
+        clear: both;
+	    float: none;
+	    width: 70%;
+	    text-align: right;
+        margin: 0 auto;
+	    margin-top: 0.7rem;
+	}
+
+    .header-top-container .user-name{
+        float: left;
+    }
+
+    .header-top-container .user-info ul{
+        float: right;
+    }
+
+    .header-top-container .user-info ul li{
+        font-size: 0.8rem;
+    }
+
+	.header-bottom{
+        width: 100%;
+	}
+
+	.header-bottom-container{
+	    width: 100%;
+	}
+
+	.header-bottom-container .header-menu{
+	    width: 100%;
+        margin: 0;
+	}
+
+	.header-bottom-container .header-menu li{
+	    /*padding: 0 0.3rem;
+	    font-size: 0.75rem;
+	    font-family: arial;*/
+	}
+
+	.header-bottom-container .header-menu li:first-child{
+	    /*margin-left: 0;*/
+	}
+
+	.header-bottom-container .additional-info{
+	    display: none;
+	}
+
+	.body-wrapper{
+		width: 100%;
+        padding: 1rem 0rem;
+	}
+
+	.body-wrapper .body-container{
+	    width: 100%;
+        /*background-image: url('../images/body-background-tab.png');*/
+        background-size: cover;
+	}
+
+	.body-container .body-left{
+	    float: none;
+	    width: 100%;
+	}
+
+	.body-container .body-left .title-box{
+        padding: 0.3rem;
+        /*margin-bottom: 2px;*/
+	}
+
+	.body-wrapper .body-container .body-left ul{
+        margin: 0;
+        padding: 0rem;
+	}
+
+	.body-container .body-left .title-box:nth-of-type(1){
+        margin: 0;
+	}
+
+    .body-container .body-left .title-box:nth-of-type(2){
+        margin: 0;
+        margin-top: 0.4rem;
+	}
+
+	.body-container .body-left ul li{
+        padding: 0.1rem;
+	}
+
+    #download1, #download2{
+        margin-right: 5%;
+        margin-top: 0;
+        margin-bottom: 0;
+        width: auto;
+    }
+
+    .body-wrapper .body-container .body-left ul li a.download{
+        display: block;
+        /*float: none;*/
+        width: 80%;
+        font-size: 0.8rem;
+	}
+
+    .body-wrapper .body-container .body-left ul li a{
+        display: block;
+        /*float: none;*/
+        width: 80%;
+        font-size: 0.8rem;
+	}
+
+	.main-container-wrapper .body-wrapper .body-container .body-right{
+	    float: right;
+	    width: 100%;
+        padding: 0.5rem 0rem;
+	}
+
+	.main-container-wrapper .body-wrapper .body-container .body-right .main{
+	    width:97%;
+        margin-left: 2%;
+	    float: none;
+        /*display: block;*/
+        padding: 0;
+    }
+
+	.body-container .body-right .main h1{
+	    font-size: 1.8rem;
+	}
+
+    .body-container .body-right .main .submain{
+        width: 100%;
+        /*border: 0.3px solid blue;*/
+        margin: 0;
+    }
+
+	.body-container .body-right .main .submain ul{
+        /*float: none;*/
+	}
+
+	.body-container .body-right .rightmenu{
+        width: 0%;
+	    display: none;
+	}
+
+    .body-container .body-right .main .submain .tabhead{
+	    width: 100%;
+	}
+
+
+	.body-container .body-right .main .submain .tabhead .tabhead-top{
+        display: none;
+	}
+
+	.body-container .body-right .main .submain .tabhead-bottom{
+        width: 100%;
+        border: none;
+    }
+
+	.body-wrapper .body-container .body-right .main .submain .tabhead-bottom .bottom-left{
+	    width: 100%;
+	    float: none;
+        padding: 0;
+        margin-bottom: 0.4rem;
+	}
+
+	.body-wrapper .body-container .body-right .main .submain .tabhead-bottom .bottom-right{
+	    width: 100%;
+        float: none;
+        padding: 0;
+        margin-bottom: 0.4rem;
+	}
+
+	.body-wrapper .body-container .body-right .main .submain .tabhead-bottom .bl{
+        width: 99%;
+        background-color: #dddddd;
+        background-image: none;
+        margin: 0.5% 0%;
+	}
+
+	.body-wrapper .body-container .body-right .main .submain .tabhead-bottom .br{
+        width: 99%;
+        background-color: #dddddd;
+        background-image: none;
+        margin: 0.5% 0%;
+        float: left;
+	}
+
+    .body-wrapper .body-container .body-right .main .submain .tabhead .bl:hover{
+        background-color: #2fc1da;
+        background-image: none;
+    }
+
+    .body-wrapper .body-container .body-right .main .submain .tabhead .br:hover{
+        background-color: #2fc1da;
+        background-image: none;
+    }
+
+    .body-wrapper .body-container .body-right .main .submain .tabhead .active-tab{
+        background-color: #2fc1da;
+    }
+
+
+	.body-container .body-right .main .submain .tabBody{
+        clear: both;
+        /*margin-top: 5rem;*/
+        /*display: block;*/
+        padding: 0.5rem 0;
+	}
+
+	.body-container .body-right .main .submain .tabBody .item{
+	    padding-top: 0.9375rem;
+	    padding-bottom: 0.5625rem;
+        padding-left: 1%;
+	    border-bottom: 1px solid #d8d8d8;
+	}
+
+	.body-container .body-right .main .submain .tabBody .item .profilePic{
+	    float: left;
+	}
+
+	.body-container .body-right .main .submain .tabBody .item .details{
+        clear: both;
+	    float: none;
+        display: block;
+	    margin-left: 0em;
+        padding-left: 0;
+	}
+
+
+	.footer-wrapper{
+        width: 100%;
+	}
+
+    .footer-container .footer-right{
+    	display: none;
+    }
+
+    .footer-wrapper .footer-container ul.footer-menu{
+        width: 100%;
+    }
+
+    .footer-container ul.footer-menu li{
+        float: left;
+    }
+
+    .footer-container ul.footer-menu li a{
+        float: left;
+        font-size: 0.6rem;
+    }
+
+}

@@ -1,0 +1,1386 @@
+*{
+    font-family: Arial;
+}
+
+.clearfix:before, .clearfix:after{
+    content:' ';
+    display: table;
+}
+
+.clearfix:after{
+    clear: both;
+}
+
+.clearfix{
+    /*zoom: 1;*/
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+.header-top{
+	background-color: #7dd9e8;
+}
+
+.header-top .header-top-container{
+	background-color: inherit;
+    /*padding-top: 20px;
+    padding-bottom: 16px;*/
+    padding-top: 1.25rem;
+    padding-bottom: 1rem;
+}
+
+.header-top-container .logo-wrapper{
+    float: left;
+    /*width: 247px;*/
+    width: 26.3326226013%;
+    margin: 0;
+}
+
+.header-top-container .logo-wrapper img{
+    /*width:223px;*/
+     width: 90.2834008097%;
+    margin: 0;
+    display: block;
+}
+
+.header-top-container .search-wrapper{
+    float: left;
+    background-image: url('../images/search-wrapper.png');
+    /*margin-top: 20px;*/
+    margin-top: 2.13219616205%;
+    /*width: 336px;*/
+    width: 35.8208955224%;
+    height: 1.25rem;
+    padding: 0px;
+    /*min-width: 300px;*/
+}
+
+
+.header-top-container .search-wrapper input[type='search']{
+    /*width: 254px;*/
+    width: 75.5952380952%;
+    /*height: 20px;*/
+    height: 1.25rem;
+    background-image: url('../images/search-input.png');
+    background-size: 100% 100%;
+    margin:0px;
+    float: left;
+    border: none;
+    /*padding-left: 7px;
+    font-size: 11px;*/
+    padding-left: 2.0833333333333333%;
+    font-size: 0.6875rem;
+    font-family: left;
+}
+
+.header-top-container .search-wrapper input[type='submit']:nth-child(2){
+    /*width: 22px;*/
+    width: 6.54761904762%;
+    /*height: 20px;*/
+    height: 1.25rem;
+    background-image: url('../images/search-icon.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0px;
+    float: left;
+    border: none;
+}
+
+.header-top-container .search-wrapper input[type='submit']:nth-child(3){
+    /*width: 53px;*/
+    /*height: 20px;*/
+    width: 15.7738095238%;
+    /*height: 20px;*/
+    height: 100%;
+    background-image: url('../images/search-button.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0px;
+    float: right;
+    border: none;
+}
+
+.header-top-container .user-info{
+    float: right;
+    width: auto;
+    text-align: right;
+    /*margin-top: 5px;*/
+    margin-top: 0.53304904051%;
+}
+
+.header-top-container .user-info .user-name{
+    /*margin-bottom: 6px;*/
+    margin-bottom: 0.375rem;
+    /*font-size: 15px;*/
+    font-size: 0.9375rem;
+    font-family:arial;
+    /*letter-spacing: 0.5px;*/
+}
+
+.header-top-container .user-info ul{
+    list-style: none;
+    /*padding-top: 1px;*/
+    padding-top: 0.0625rem;
+}
+
+.header-top-container .user-info ul li{
+    float: left;
+    /*font-size: 11px;*/
+    font-size: 0.6875rem;
+}
+
+.header-top-container .user-info ul li:nth-of-type(1){
+    background-image: url('../images/top-header-1.png');
+    background-repeat: no-repeat;
+    background-position: right 0px top 0px;
+    background-size: contain;
+    /*padding: 0px 6px;*/
+    padding: 0 0.375rem;
+}
+
+.header-top-container .user-info ul li:nth-child(2){
+    background-image: url('../images/top-header-2.png');
+    background-repeat: no-repeat;
+    background-position: right 0px top 0px;
+    background-size: contain;
+    /*padding: 0px 7px 0px 8px;*/
+    padding: 0 0.4375rem 0 0.5rem;
+}
+
+.header-top-container .user-info ul li:nth-child(3){
+    /*padding: 0px 2px 0px 7px;*/
+    padding: 0 0.125rem 0 0.4375rem;
+}
+
+.header-bottom{
+	background-color: #f5f5f5;
+}
+
+.header-bottom .header-bottom-container{
+	background-color: inherit;
+	/*padding-top: 12px;
+	padding-bottom: 12px;*/
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    height: 100%;
+}
+
+.header-bottom-container .header-menu{
+	float: left;
+	list-style: none;
+    /*width: 65%;*/
+}
+
+.header-bottom-container .header-menu li{
+	float: left;
+	/*padding-left: 16px;*/
+	/*padding-right: 16px;*/
+	padding-left: 1.7057569296375266%;
+	padding-right: 1.7057569296375266%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+	/*font-size: 14px;*/
+    font-size: 0.875rem;
+}
+
+.header-bottom-container .header-menu li:nth-of-type(1){
+	/*margin-left: -8px;*/
+    margin-left: -0.5rem;
+}
+
+.header-bottom-container .additional-info{
+	list-style: none;
+	float: right;
+}
+
+.header-bottom-container .additional-info li{
+	list-style: none;
+	float: left;
+	/*font-size: 11px;*/
+    font-size: 0.6875rem;
+}
+
+.header-bottom-container .additional-info li:nth-of-type(1){
+	background-image: url('../images/topic-box.png');
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: contain;
+	/*padding: 3px 38px 0px 18px;*/
+    padding: 0.1875rem 2.375rem 0 1.125rem;
+}
+
+.header-bottom-container .additional-info li:nth-of-type(2){
+	background-image: url('../images/friend-requests.png');
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: contain;
+	/*padding: 3px 0px 1px 25px;*/
+    padding: 0.1875rem 0 0.0625rem 1.5625rem;
+}
+
+.body-wrapper{
+	/*padding-top: 30px;
+    padding-bottom: 32px;*/
+    padding-top: 1.875rem;
+    padding-bottom: 2rem;
+}
+
+.body-container{
+	background-image: url('../images/body-background.png');
+    background-size: contain;
+}
+
+.body-container .title-box{
+    color: white;
+    background-color: #2fc1da;
+    /*padding-left: 12px;*/
+    padding-left: 0.75rem;
+    font-size: 1rem;
+    /*font-size: 16px;*/
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin-bottom: 4px;
+}
+
+.body-container .body-left .title-box:nth-of-type(2){
+    margin-top: 4px;
+}
+
+.body-container .body-left ul{
+    list-style: none;
+    width: 100%;
+}
+
+.body-container .body-left ul li{
+    /*padding-left: 11px;*/
+    padding-left: 5.670103093%;
+    padding-top: 6px;
+    padding-bottom: 10px;
+    /*font-size: 11px;*/
+    font-size: 0.6875rem;
+    font-weight: bold;
+    line-height: 1.5em;
+    /*letter-spacing: 0.04px*/
+}
+
+.body-container .body-left ul li a{
+    /*display: block;*/
+}
+
+#download1, #download2{
+    float: right;
+    /*margin-right: 14px;*/
+    margin-right: 7.21649484536%;
+    display: block;
+    padding-top: 1px;
+}
+
+#download1{
+    /*margin-top: 14px;*/
+    margin-top: 7.21649484536%;
+}
+
+.body-container .body-left .downloads li a.download{
+    /*display: block;*/
+    /*float: left;*/
+    display: inline-block;
+    /* a is inline and inline elementes don't have width.
+    So to give it width its diplay needs to be changed*/
+    /*width: 96px;*/
+    /*width: 49.4845360825%;*/
+    width: 52%;
+    /*Because inherited width seems to be 192px instead of 194px due imprecise calculation.*/
+}
+
+.body-container .body-left li span.burger{
+    /*display: block;*/
+    float: right;
+    /*vertical-align: middle;*/
+    margin-right: 14px;
+    margin-top: 1px;
+}
+
+.body-container .body-left ul:nth-of-type(2) li:nth-of-type(1) span.burger{
+    margin-top: 7px;
+}
+
+.body-container .body-left ul:nth-of-type(2) li a{
+    display: inline-block;
+    /*width: 140px;*/
+    width: 76%;
+    /*border: 0.3px solid red;*/
+}
+
+.body-container .body-left li:hover{
+    background-color: white;
+}
+
+.body-container .body-right .main{
+    /*padding-left: 26px;*/
+    padding-left: 3.494623655913978%;
+    /*padding-right: 24px;*/
+    padding-right: 3.225806451612903%;
+    margin-top: -1px;
+    background-color: white;
+
+}
+
+.body-container .body-right .main h1{
+    font-size: 30px;
+    /*margin-top: 1px;*/
+    margin-bottom: 13px;
+    line-height: 0px;
+    padding-top: 11px;
+    padding-bottom: 10px
+}
+
+.body-container .body-right .main .submain ul{
+    list-style: none;
+}
+
+.body-container .body-right .main .submain .tabhead{
+    background-image: url('../images/below-Entries.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.body-container .body-right .main .submain .tabhead .tabhead-top{
+    font-size: 12px;
+    font-weight: bold;
+    padding-top: 12px;
+    padding-bottom: 11px;
+}
+
+.body-container .body-right .main .submain .tabhead .tabhead-top .tabhead1{
+    text-align: center;
+    float:left;
+}
+
+.body-container .body-right .main .submain .tabhead .tabhead-top .tabhead2{
+    text-align: center;
+    float: right;
+}
+
+.body-container .body-right .main .submain .tabhead-bottom{
+    font-size: 12px;
+    border-bottom: 2px solid #30c2d9;
+    height: 28px;
+    margin-bottom: 0px;
+}
+
+.body-container .body-right .main .submain .tabhead .tabhead-bottom .bottom-left{
+	float: left;
+}
+.body-container .body-right .main .submain .tabhead .tabhead-bottom .bottom-right{
+	float: right;
+}
+
+.body-container .body-right .main .submain .tabhead-bottom .bl{
+	float: left;
+    margin-left: 10px;
+}
+
+.body-container .body-right .main .submain .tabhead-bottom .br{
+	float: right;
+	margin-right: 10px;
+}
+
+.body-right .main .submain .tabhead .bl, .body-right .main .submain .tabhead .br{
+    background-image: url('../images/tab-inactive.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    text-align: center;
+    width: 44.5%;
+    padding-bottom: 9px;
+    padding-top: 9px;
+    /*border: 0.3px solid red;*/
+}
+
+.body-container .body-right .main .submain .tabhead .active-tab{
+    background-image: url('../images/tab-active.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    text-align: center;
+    width: 44.5%;
+    padding-bottom: 9px;
+    padding-top: 9px;
+}
+
+.body-container .body-right .main .submain .tabhead .tabhead-bottom .bl:hover{
+	background-image: url('../images/tab-active.png');
+}
+
+.body-container .body-right .main .submain .tabhead .tabhead-bottom .br:hover{
+	background-image: url('../images/tab-active.png');
+}
+
+.body-container .body-right .main .submain .tabBody .item{
+	padding-top: 15px;
+	padding-bottom: 9px;
+	/*Padding is preferred to margin when floated elements are involved.*/
+    border-bottom: 1px solid #d8d8d8;
+}
+
+.body-container .body-right .main .submain .tabBody .item .profilePic{
+    float: left;
+}
+
+.body-container .body-right .main .submain .tabBody .item .details{
+    float: left;
+    padding-left: 9px;
+    line-height: 16px;
+}
+
+.body-container .body-right .main .submain .tabBody .item li{
+    float: left;
+}
+.body-container .body-right .main .submain .tabBody .item .details h2{
+	font-size: 12px;
+}
+
+.body-container .body-right .main .submain .tabBody .item a{
+	/*Notice how i have left out .details to decrease specificity or
+	else this arctic blue like color would have overriden green and
+	red colors for anchor tags below*/
+    color: #4faec0;
+    font-weight: bold;
+}
+
+.submain .tabBody .item .details .first-line{
+    color: #309eaf;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 10px;
+}
+
+.body-container .body-right .main .submain .tabBody .item:nth-of-type(5) .details .first-line a{
+    color: #d73e1c;
+}
+
+.submain .tabBody .item .details .second-line h2{
+    color: black;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 2px;
+}
+
+.submain .tabBody .item .details .third-line li:not(:first-child){
+    background-image: url('../images/third-line-list.png');
+    background-repeat: no-repeat;
+    background-position: left 0px top 0px;
+    background-size: contain;
+    padding: 0px 5px 0px 7px;
+    font-size: 11px;
+}
+
+.submain .tabBody .item .details .third-line li:first-child{
+    padding-right: 5px;
+    font-size: 11px;
+}
+
+.submain .tabBody .item .details .third-line li:nth-child(3) a{
+    color: #70961f;
+    font-weight: bold;
+}
+
+.submain .tabBody .item .details .fourth-line{
+    font-size: 11px;
+}
+
+.submain .tabBody .item:nth-of-type(5) .details .first-line a{
+	color: #d73e1c;
+}
+
+.submain .tabBody .item:nth-of-type(5) .details .first-line a{
+    color: #d73e1c;
+}
+
+.body-container .body-right .rightmenu ul{
+    list-style: none;
+}
+
+.body-container .body-right .rightmenu li{
+    padding-left: 12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.body-container .body-right .rightmenu li:hover{
+    background-color: white;
+}
+
+.footer-wrapper{
+    height: 45px;
+    background-color: #727272;
+}
+
+.footer-container{
+    background-color: inherit;
+    margin: 0 auto;
+    padding-bottom: 16px;
+    padding-top: 16px;
+    /*letter-spacing: 0.5px;*/
+}
+
+.footer-container ul.footer-menu{
+    list-style: none;
+}
+
+.footer-container ul.footer-menu li{
+    float: left;
+}
+
+.footer-container ul.footer-menu li a{
+    display: block;
+    /*with display block a will be centered vertically inside its
+    container which is an li in this case. With this the bullet
+    image will also be vertically in the middle of the a tag inside
+    the li.*/
+    color: white;
+    font-size: 9px;
+}
+
+.footer-container .footer-menu li:not(:first-child){
+    background-image: url('../images/footer-bullet1.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 4px 4px;
+    padding: 2px 7px 0px 10px;
+}
+
+.footer-container .footer-menu li:first-child{
+    padding: 2px 7px 0px 2px;
+}
+
+.footer-container .footer-right{
+    float: right;
+    font-size: 9px;
+    color: white;
+    padding-top: 2px;
+    padding-right: 3px;
+}
+
+@media only screen and (max-width: 768px){
+
+    .main-container-wrapper{
+        width: 100%;
+    }
+
+    .header-wrapper{
+		width: 100%;
+	}
+
+    .header-top{
+        height: auto;
+    }
+
+    .header-top-container, .header-bottom-container, .body-container, .footer-container{
+    	width: 100%;
+    }
+
+    .header-top-container{
+    }
+
+	.header-top-container .logo-wrapper{
+	    display: block;
+	    width: 30%;
+	    margin: 0;
+	}
+
+	.header-top-container .logo-wrapper img{
+	    width: 100%;
+	    margin: 0;
+	    display: block;
+	}
+
+	.header-top-container .search-wrapper{
+	    float: right;
+        /*clear: both;*/
+	    width: 60%;
+	    padding: 0;
+	    height: 1.35rem;
+        margin-top: -0.5rem;
+	}
+
+	.header-top-container .user-info{
+	    float: right;
+	    /*width: 100%;*/
+	    text-align: right;
+	    margin-top: 1rem;
+	    display: block;
+	}
+
+    .header-top-container .user-name{
+        /*float: left;*/
+    }
+    .header-top-container .user-info ul{
+        /*float: right;*/
+    }
+
+	.header-bottom{
+        width: 100%;
+	}
+
+	.header-bottom-container{
+	    width: 100%;
+        padding: 0;
+        margin: 0;
+	}
+
+	.header-bottom-container .header-menu{
+	    width: 100%;
+        /*border: 0.3px solid red;*/
+        margin: 0;
+	}
+
+	.header-bottom-container .header-menu li{
+	    padding: 0 0.3rem;
+	    /*padding-top: 0.0625rem;*/
+	    font-size: 0.75rem;
+	    font-family: arial;
+	}
+
+	.header-bottom-container .header-menu li:first-child{
+	    margin-left: 0;
+	}
+
+	.header-bottom-container .additional-info{
+	    display: none;
+	    margin: 0;
+	    padding: 0;
+	}
+
+	.body-wrapper{
+		width: 100%;
+	}
+
+	.body-wrapper .body-container{
+	    width: 100%;
+        /*background-image: url('../images/body-background-tab.png');*/
+        background-size: cover;
+	}
+
+	.body-container .body-left{
+	    float: left;
+	    width: 30%;
+	}
+
+
+	.title-box{
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+	}
+
+	.body-container .body-left ul{
+	}
+
+	.body-container .body-left .title-box:nth-of-type(2){
+	}
+
+	.body-container .body-left ul li{
+	}
+
+    #download1, #download2{
+        margin-right: 10%;
+    }
+
+	.body-container .body-left li a.download{
+    display: block;
+    float: none;
+	}
+
+	.body-container .body-right{
+	    float: right;
+	    width: 68%;
+        background-color: white;
+        /*margin-left: 1%;*/
+	}
+
+	.main-container-wrapper .body-wrapper .body-container .body-right .main{
+	    width:100%;;
+	    /*width: 32.375rem;*/
+	    float: right;
+	    /*padding-left: 26px;*/
+	    padding-left: 2%;
+    }
+
+	.body-container .body-right .main h1{
+	    font-size: 1.8rem;
+        /*width: 100%;*/
+	}
+
+    .body-container .body-right .main .submain{
+        width: 100%;
+        /*border: 0.3px solid blue;*/
+    }
+
+	.body-container .body-right .main .submain ul{
+        /*float: none;*/
+	}
+
+	.body-container .body-right .rightmenu{
+        width: 0%;
+	    display: none;
+	}
+
+	/*.submain .tabhead{
+        width: 80%;
+        border: 0.2px solid green;
+
+    }*/
+
+    /*Above selector won't work as before this outside of media query similar
+    selector but with full name of all parents like shoen below is written which
+    is more specific than this.*/
+
+    .body-container .body-right .main .submain .tabhead{
+	    width: 100%;
+        /*border: 0.2px solid green;*/
+
+	}
+
+
+	.body-container .body-right .main .submain .tabhead .tabhead-top{
+        display: none;
+	}
+
+	.body-container .body-right .main .submain .tabhead-bottom{
+        width: 100%;
+        border: none;
+    }
+
+	.body-wrapper .body-container .body-right .main .submain .tabhead-bottom .bottom-left{
+	    width: 100%;
+	    float: left;
+        padding: 0;
+	}
+    /*I added the .body-wrapper at start to make more specific because
+    without it above selector wasn't overriding the width.*/
+
+	.body-wrapper .body-container .body-right .main .submain .tabhead-bottom .bottom-right{
+	    width: 100%;
+        float: none;
+        padding: 0;
+	}
+
+	.body-wrapper .body-container .body-right .main .submain .tabhead-bottom .bl{
+        width: 49.5%;
+        background-color: #dddddd;
+        background-image: none;
+        margin: 0.5% 0%;
+	}
+
+	.body-wrapper .body-container .body-right .main .submain .tabhead-bottom .br{
+        width: 49.5%;
+        background-color: #dddddd;
+        background-image: none;
+        margin: 0.5% 0%;
+	}
+
+    .body-wrapper .body-container .body-right .main .submain .tabhead .bl:hover{
+        background-color: #2fc1da;
+        background-image: none;
+    }
+
+    .body-wrapper .body-container .body-right .main .submain .tabhead .br:hover{
+        background-color: #2fc1da;
+        background-image: none;
+    }
+
+    .body-wrapper .body-container .body-right .main .submain .tabhead .active-tab{
+        background-color: #2fc1da;
+    }
+
+
+	.body-container .body-right .main .submain .tabBody{
+        clear: both;
+	}
+
+	.body-container .body-right .main .submain .tabBody .item{
+	    padding-top: 0.9375rem;
+	    padding-bottom: 0.5625rem;
+        padding-left: 1%;
+	    border-bottom: 1px solid #d8d8d8;
+	}
+
+	.body-container .body-right .main .submain .tabBody .item .profilePic{
+	    float: left;
+	}
+
+	.body-container .body-right .main .submain .tabBody .item .details{
+        clear: both;
+	    float: none;
+        display: block;
+	    margin-left: 0em;
+        padding-left: 0;
+	}
+
+
+	.footer-wrapper{
+        width: 100%;
+	}
+
+    .footer-container .footer-right{
+    	display: none;
+    }
+
+    .footer-wrapper .footer-container .footer-menu{
+        width: 100%;
+        font-size: 10rem;
+    }
+
+}
+@media only screen and (max-width: 375px){
+
+    .main-container-wrapper{
+        width: 100%;
+    }
+
+    .header-wrapper{
+		width: 100%;
+	}
+
+    .header-top{
+        height: auto;
+    }
+
+    .header-top-container, .header-bottom-container, .body-container, .footer-container{
+    	width: 100%;
+    }
+
+	.header-top-container .logo-wrapper{
+	    display: block;
+	    width: 25%;
+	    margin-top: -1rem;
+        /*background-color: green;*/
+	}
+
+	.header-top-container .logo-wrapper img{
+	    width: 100%;
+	    margin: 0;
+	    display: block;
+	}
+
+	.header-top-container .search-wrapper{
+	    float: right;
+	    width: 70%;
+	    height: 1.35rem;
+        margin-top: -1rem;
+	}
+
+	.header-top-container .user-info{
+        clear: both;
+	    float: none;
+	    width: 70%;
+	    text-align: right;
+        margin: 0 auto;
+	    margin-top: 0.7rem;
+	}
+
+    .header-top-container .user-name{
+        float: left;
+    }
+
+    .header-top-container .user-info ul{
+        float: right;
+    }
+
+    .header-top-container .user-info ul li{
+        font-size: 0.8rem;
+    }
+
+	.header-bottom{
+        width: 100%;
+	}
+
+	.header-bottom-container{
+	    width: 100%;
+	}
+
+	.header-bottom-container .header-menu{
+	    width: 100%;
+        margin: 0;
+	}
+
+	.header-bottom-container .header-menu li{
+	    /*padding: 0 0.3rem;
+	    font-size: 0.75rem;
+	    font-family: arial;*/
+	}
+
+	.header-bottom-container .header-menu li:first-child{
+	    /*margin-left: 0;*/
+	}
+
+	.header-bottom-container .additional-info{
+	    display: none;
+	}
+
+	.body-wrapper{
+		width: 100%;
+        padding: 1rem 0rem;
+	}
+
+	.body-wrapper .body-container{
+	    width: 100%;
+        /*background-image: url('../images/body-background-tab.png');*/
+        background-size: cover;
+	}
+
+	.body-container .body-left{
+	    float: none;
+	    width: 100%;
+	}
+
+	.body-container .body-left .title-box{
+        padding: 0.3rem;
+        /*margin-bottom: 2px;*/
+	}
+
+	.body-wrapper .body-container .body-left ul{
+        margin: 0;
+        padding: 0rem;
+	}
+
+	.body-container .body-left .title-box:nth-of-type(1){
+        margin: 0;
+	}
+
+    .body-container .body-left .title-box:nth-of-type(2){
+        margin: 0;
+        margin-top: 0.4rem;
+	}
+
+	.body-container .body-left ul li{
+        padding: 0.1rem;
+	}
+
+    #download1, #download2{
+        margin-right: 5%;
+        margin-top: 0;
+        margin-bottom: 0;
+        width: auto;
+    }
+
+    .body-wrapper .body-container .body-left ul li a.download{
+        display: block;
+        /*float: none;*/
+        width: 80%;
+        font-size: 0.8rem;
+	}
+
+    .body-wrapper .body-container .body-left ul li a{
+        display: block;
+        /*float: none;*/
+        width: 80%;
+        font-size: 0.8rem;
+	}
+
+	.main-container-wrapper .body-wrapper .body-container .body-right{
+	    float: right;
+	    width: 100%;
+        padding: 0.5rem 0rem;
+	}
+
+	.main-container-wrapper .body-wrapper .body-container .body-right .main{
+	    width:97%;
+        margin-left: 2%;
+	    float: none;
+        /*display: block;*/
+        padding: 0;
+    }
+
+	.body-container .body-right .main h1{
+	    font-size: 1.8rem;
+	}
+
+    .body-container .body-right .main .submain{
+        width: 100%;
+        /*border: 0.3px solid blue;*/
+        margin: 0;
+    }
+
+	.body-container .body-right .main .submain ul{
+        /*float: none;*/
+	}
+
+	.body-container .body-right .rightmenu{
+        width: 0%;
+	    display: none;
+	}
+
+    .body-container .body-right .main .submain .tabhead{
+	    width: 100%;
+	}
+
+
+	.body-container .body-right .main .submain .tabhead .tabhead-top{
+        display: none;
+	}
+
+	.body-container .body-right .main .submain .tabhead-bottom{
+        width: 100%;
+        border: none;
+    }
+
+	.body-wrapper .body-container .body-right .main .submain .tabhead-bottom .bottom-left{
+	    width: 100%;
+	    float: none;
+        padding: 0;
+	}
+
+	.body-wrapper .body-container .body-right .main .submain .tabhead-bottom .bottom-right{
+	    width: 100%;
+        float: none;
+        padding: 0;
+        margin-bottom: 0.4rem;
+	}
+
+	.body-wrapper .body-container .body-right .main .submain .tabhead-bottom .bl{
+        width: 99%;
+        background-color: #dddddd;
+        background-image: none;
+        margin: 0.5% 0%;
+	}
+
+	.body-wrapper .body-container .body-right .main .submain .tabhead-bottom .br{
+        width: 99%;
+        background-color: #dddddd;
+        background-image: none;
+        margin: 0.5% 0%;
+        float: left;
+	}
+
+    .body-wrapper .body-container .body-right .main .submain .tabhead .bl:hover{
+        background-color: #2fc1da;
+        background-image: none;
+    }
+
+    .body-wrapper .body-container .body-right .main .submain .tabhead .br:hover{
+        background-color: #2fc1da;
+        background-image: none;
+    }
+
+    .body-wrapper .body-container .body-right .main .submain .tabhead .active-tab{
+        background-color: #2fc1da;
+    }
+
+
+	.body-container .body-right .main .submain .tabBody{
+        clear: both;
+        /*margin-top: 5rem;*/
+        /*display: block;*/
+        padding: 0.5rem 0;
+	}
+
+	.body-container .body-right .main .submain .tabBody .item{
+	    padding-top: 0.9375rem;
+	    padding-bottom: 0.5625rem;
+        padding-left: 1%;
+	    border-bottom: 1px solid #d8d8d8;
+	}
+
+	.body-container .body-right .main .submain .tabBody .item .profilePic{
+	    float: left;
+	}
+
+	.body-container .body-right .main .submain .tabBody .item .details{
+        clear: both;
+	    float: none;
+        display: block;
+	    margin-left: 0em;
+        padding-left: 0;
+	}
+
+
+	.footer-wrapper{
+        width: 100%;
+	}
+
+    .footer-container .footer-right{
+    	display: none;
+    }
+
+    .footer-wrapper .footer-container ul.footer-menu{
+        width: 100%;
+    }
+
+    .footer-container ul.footer-menu li{
+        float: left;
+    }
+
+    .footer-container ul.footer-menu li a{
+        float: left;
+        font-size: 0.6rem;
+    }
+
+}
+@media only screen and (max-width: 360px){
+
+    .main-container-wrapper{
+        width: 100%;
+    }
+
+    .header-wrapper{
+		width: 100%;
+	}
+
+    .header-top{
+        height: auto;
+    }
+
+    .header-top-container, .header-bottom-container, .body-container, .footer-container{
+    	width: 100%;
+    }
+
+	.header-top-container .logo-wrapper{
+	   display: none;
+	}
+
+	.header-top-container .search-wrapper{
+	    float: left;
+	    width: 80%;
+	    height: 1.35rem;
+        margin-top: -1rem;
+	}
+
+	.header-top-container .user-info{
+        clear: both;
+	    float: left;
+	    width: 100%;
+	    text-align: right;
+        margin: 0 auto;
+	    margin-top: 0.7rem;
+	}
+
+    .header-top-container .user-name{
+        float: none;
+    }
+
+    .header-top-container .user-info ul{
+        float: right;
+    }
+
+    .header-top-container .user-info ul li{
+        font-size: 0.8rem;
+    }
+
+	.header-bottom{
+        width: 100%;
+	}
+
+	.header-bottom-container{
+	    width: 100%;
+	}
+
+	.header-bottom-container .header-menu{
+	    width: 100%;
+        margin: 0;
+	}
+
+	.header-bottom-container .header-menu li{
+	    /*padding: 0 0.3rem;
+	    font-family: arial;*/
+        font-size: 1rem;
+        width: 90%;
+        padding-bottom: 0.3rem;
+	}
+
+	.header-bottom-container .header-menu li:first-child{
+	    /*margin-left: 0;*/
+	}
+
+	.header-bottom-container .additional-info{
+	    display: none;
+	}
+
+	.body-wrapper{
+		width: 100%;
+        padding: 1rem 0rem;
+	}
+
+	.body-wrapper .body-container{
+	    width: 100%;
+        /*background-image: url('../images/body-background-tab.png');*/
+        background-size: cover;
+	}
+
+	.body-container .body-left{
+	    float: none;
+	    width: 100%;
+	}
+
+	.body-container .body-left .title-box{
+        padding: 0.3rem;
+        /*margin-bottom: 2px;*/
+	}
+
+	.body-wrapper .body-container .body-left ul{
+        margin: 0;
+        padding: 0rem;
+	}
+
+	.body-container .body-left .title-box:nth-of-type(1){
+        margin: 0;
+	}
+
+    .body-container .body-left .title-box:nth-of-type(2){
+        margin: 0;
+        margin-top: 0.4rem;
+	}
+
+	.body-container .body-left ul li{
+        padding: 0.1rem;
+	}
+
+    #download1, #download2{
+        margin-right: 5%;
+        margin-top: 0;
+        margin-bottom: 0;
+        width: auto;
+    }
+
+    .body-wrapper .body-container .body-left ul li a.download{
+        display: block;
+        /*float: none;*/
+        width: 80%;
+        font-size: 0.8rem;
+	}
+
+    .body-wrapper .body-container .body-left ul li a{
+        display: block;
+        /*float: none;*/
+        width: 80%;
+        font-size: 0.8rem;
+	}
+
+	.main-container-wrapper .body-wrapper .body-container .body-right{
+	    float: right;
+	    width: 100%;
+        padding: 0.5rem 0rem;
+	}
+
+	.main-container-wrapper .body-wrapper .body-container .body-right .main{
+	    width:97%;
+        margin-left: 2%;
+	    float: none;
+        /*display: block;*/
+        padding: 0;
+    }
+
+	.body-container .body-right .main h1{
+	    font-size: 1.8rem;
+	}
+
+    .body-container .body-right .main .submain{
+        width: 100%;
+        /*border: 0.3px solid blue;*/
+        margin: 0;
+    }
+
+	.body-container .body-right .main .submain ul{
+        /*float: none;*/
+	}
+
+	.body-container .body-right .rightmenu{
+        width: 0%;
+	    display: none;
+	}
+
+    .body-container .body-right .main .submain .tabhead{
+	    width: 100%;
+	}
+
+
+	.body-container .body-right .main .submain .tabhead .tabhead-top{
+        display: none;
+	}
+
+	.body-container .body-right .main .submain .tabhead-bottom{
+        width: 100%;
+        border: none;
+    }
+
+	.body-wrapper .body-container .body-right .main .submain .tabhead-bottom .bottom-left{
+	    width: 100%;
+	    float: none;
+        padding: 0;
+	}
+
+	.body-wrapper .body-container .body-right .main .submain .tabhead-bottom .bottom-right{
+	    width: 100%;
+        float: none;
+        padding: 0;
+        margin-bottom: 0.4rem;
+	}
+
+	.body-wrapper .body-container .body-right .main .submain .tabhead-bottom .bl{
+        width: 99%;
+        background-color: #dddddd;
+        background-image: none;
+        margin: 0.5% 0%;
+	}
+
+	.body-wrapper .body-container .body-right .main .submain .tabhead-bottom .br{
+        width: 99%;
+        background-color: #dddddd;
+        background-image: none;
+        margin: 0.5% 0%;
+        float: left;
+	}
+
+    .body-wrapper .body-container .body-right .main .submain .tabhead .bl:hover{
+        background-color: #2fc1da;
+        background-image: none;
+    }
+
+    .body-wrapper .body-container .body-right .main .submain .tabhead .br:hover{
+        background-color: #2fc1da;
+        background-image: none;
+    }
+
+    .body-wrapper .body-container .body-right .main .submain .tabhead .active-tab{
+        background-color: #2fc1da;
+    }
+
+
+	.body-container .body-right .main .submain .tabBody{
+        clear: both;
+        /*margin-top: 5rem;*/
+        /*display: block;*/
+        padding: 0.5rem 0;
+	}
+
+	.body-container .body-right .main .submain .tabBody .item{
+	    padding-top: 0.9375rem;
+	    padding-bottom: 0.5625rem;
+        padding-left: 1%;
+	    border-bottom: 1px solid #d8d8d8;
+	}
+
+	.body-container .body-right .main .submain .tabBody .item .profilePic{
+	    float: left;
+	}
+
+	.body-container .body-right .main .submain .tabBody .item .details{
+        clear: both;
+	    float: none;
+        display: block;
+	    margin-left: 0em;
+        padding-left: 0;
+	}
+
+
+	.footer-wrapper{
+        width: 100%;
+        display: none;
+	}
+
+}

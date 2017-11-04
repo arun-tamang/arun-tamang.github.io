@@ -1,0 +1,106 @@
+.main-container-wrapper{
+    width: 100%;
+}
+
+.header-top{
+    height: 5.3125rem;
+}
+
+.header-top .header-top-container, .header-bottom .header-bottom-container{
+    max-width: 58.625rem;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header-bottom{
+    /*height: 40px;*/
+    height: 2.5rem;
+}
+
+.body-container{
+    /*width: 938px;*/
+    max-width: 58.625rem;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.body-container .body-left{
+    /*width: 194px;*/
+    width: 20.6823027719%;
+    float: left;
+}
+
+.body-container .body-right{
+    float: right;
+    /*width: 744px;*/
+    width: 79.3176972281%;
+}
+
+.body-container .body-right .main{
+    /*width: 518px;*/
+    width: 69%;
+    /*width: 55.223880597%;*/
+    float: left;
+    /*border: 0.3px solid red;*/
+}
+
+.body-container .body-right .main .submain{
+    width: 100%;
+}
+
+.body-container .body-right .main .submain .tabhead{
+    width: 100%;
+    height: 65px;
+}
+
+.body-container .body-right .main .submain .tabhead .tabhead-top{
+    width: 100%;
+    font-size: 12px;
+    font-weight: bold;
+    padding-top: 12px;
+    padding-bottom: 11px;
+}
+
+.body-container .body-right .main .submain .tabhead .tabhead-top .tabhead1{
+    width: 50%;
+}
+
+.body-container .body-right .main .submain .tabhead .tabhead-top .tabhead2{
+    width: 50%;
+}
+
+.body-container .body-right .main .submain .tabhead .tabhead-bottom{
+    width: 100%;
+}
+
+.body-container .body-right .main .submain .tabhead .tabhead-bottom .bottom-left{
+    width: 50%;
+}
+
+.body-container .body-right .main .submain .tabhead .tabhead-bottom .bottom-right{
+    width: 50%;
+}
+
+.body-container .body-right .main .submain .tabBody{
+    width: 100%;
+    /*margin-top: */
+}
+
+.body-container .body-right .rightmenu{
+    /*width: 176px;*/
+    width: 23.6559139785%;
+    float: right;
+}
+
+.footer-wrapper{
+    height: 45px;
+}
+
+.footer-container{
+    /*width: 938px;*/
+    max-width: 58.625rem;
+    width: 100%;
+    margin: 0 auto;
+    /*border: 0.3px solid red;*/
+
+}
