@@ -637,7 +637,8 @@ button{
 	padding-left: 21px;
 }
 
-.footer-top-container .footer-outer-left .footer-center ul li{
+.footer-top-container .footer-outer-left .footer-center ul li a{
+	text-decoration: none;
 	font-family: "Open Sans", sans-serif;
 	font-size: 13px;
 	color: white;
@@ -753,7 +754,6 @@ button{
 .footer-bottom-container .footer-bottom-right li{
 	float: left;
 	/*border: 0.1px solid red;*/
-	color: white;
 	margin-left: 30px;
 	line-height: 50px;
 	/*height: 100%;*/
@@ -761,3 +761,6 @@ button{
 	padding-top: 4px;
 }
 
+.footer-bottom-container .footer-bottom-right li a{
+	color: white;
+}
