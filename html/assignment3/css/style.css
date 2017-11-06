@@ -370,7 +370,6 @@ button{
 
 .body-container .project .project-top .project-details ul{
 	list-style: none;
-	margin-top: ;
 }
 
 .body-container .project .project-top .project-details ul li{
@@ -474,7 +473,6 @@ button{
 	height: 273px;
 	/*3 px for bottom of image frame*/
 	/*background-color: green;*/
-	margin-bottom:;
 }
 
 .body-container .project .other-projects .project-list li.project-image{
