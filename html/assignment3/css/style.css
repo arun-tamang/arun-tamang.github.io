@@ -128,11 +128,13 @@ button{
 }
 
 .header-bottom .header-bottom-container{
+	position: relative;
 }
 
 .header-bottom .header-bottom-container .abs-triangle{
 	position: absolute;
 	top: 100%;
+	left: 0%;
 }
 
 .header-bottom .header-bottom-container .hb-left{
