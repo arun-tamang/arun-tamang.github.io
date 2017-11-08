@@ -805,6 +805,7 @@ button{
 	}
 
 	.header-top{
+		margin-top: -1.8rem;
 		/*height: auto;*/
 		/*background-color: yellow;*/
 	}
@@ -816,11 +817,13 @@ button{
 	.header-top .header-top-container .logo-wrapper{
 		float: none;
 		width: 30%;
+		padding-top: 0.3rem;
+		margin-bottom: -1rem;
 	}
 
 	.header-top .header-top-container ul.header-menus{
 		float: none;
-		width: 100%;
+		/*width: 100%;*/
 		background-color: gray;
 	}
 

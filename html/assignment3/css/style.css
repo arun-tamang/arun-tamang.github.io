@@ -111,7 +111,7 @@ button{
 
 
 .header-top .header-top-container ul.header-menus li.dropdown{
-	margin-left: 5px;
+	margin-left: 0px;
 	margin-right: -4px;
 }
 
@@ -189,7 +189,7 @@ button{
 .body-container{
 	background-color: inherit;
 	padding-top: 50px;
-	padding-bottom: 87px;
+	padding-bottom: 89px;
 
 }
 
@@ -351,6 +351,7 @@ button{
 	color: #7f8c8c;
 	margin-bottom: 21px;
 	line-height: 1.45rem;
+	letter-spacing: 0.02rem;
 }
 
 .body-container .project .project-top .project-details{
@@ -586,7 +587,7 @@ button{
 	background-image: url('../images/footer-scale.png');
 	background-repeat: repeat-x;
 	background-position: top center;
-	padding-top: 48px;
+	padding-top: 47px;
 }
 
 .footer-top-container{
@@ -639,12 +640,15 @@ button{
 	padding-left: 21px;
 }
 
+.footer-top-container .footer-outer-left .footer-center ul li {
+	padding-bottom: 5px;
+}
+
 .footer-top-container .footer-outer-left .footer-center ul li a{
 	text-decoration: none;
 	font-family: "Open Sans", sans-serif;
 	font-size: 13px;
 	color: white;
-	padding-bottom: 5px;
 }
 
 .footer-top-container .footer-outer-left .footer-center .title{
