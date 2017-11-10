@@ -4,7 +4,7 @@ var tall = 500;
 mainWrapper.style.width = wide + 'px';
 mainWrapper.style.height = tall + 'px';
 mainWrapper.style.backgroundColor = 'rgb(252, 102, 102)';
-console.log(mainWrapper.style.width);
+// console.log(mainWrapper.style.width);
 mainWrapper.style.position = 'relative';
 
 function createBox(){
@@ -12,19 +12,22 @@ function createBox(){
     this.directionListVertical = ['up','down'];
     this.element = document.createElement('div');
     mainWrapper.appendChild(this.element);
-    this.element.style.width = '20px';
-    this.element.style.height = '20px';
+    this.width = '20px';
+    this.height = '20px';
+    this.element.style.width = this.width;
+    this.element.style.height = this.height;
     this.element.style.backgroundColor = 'gray';
     this.element.style.position = 'absolute'
-    this.left = randomFunction(0,770);
-    this.top = randomFunction(0,470);
+    this.left = randomFunction(0,wide-parseInt(this.width)-10);
+    console.log('tall-parseInt(this.height)-10',tall-parseInt(this.height)-10);
+    this.top = randomFunction(0,tall-parseInt(this.height)-10);
     this.directionHor = this.directionListHorizontal[Math.floor(Math.random()*2)];
     this.directionVer = this.directionListVertical[Math.floor(Math.random()*2)];
     var that = this;
 
 
     document.onkeydown = function(event){
-        console.log(event.keyCode);
+        // console.log(event.keyCode);
         if(event.keyCode == 37){
             //move left
             that.directionHor = 'left';
@@ -51,9 +54,9 @@ function createBox(){
         if(that.directionHor == 'left'){
             //move left
             if(!(that.left<5)){
-                that.left -= 5;
+                that.left -= randomFunction(1,6);
                 that.element.style.left = that.left + 'px';
-                console.log(that.element.style.left);
+                // console.log(that.element.style.left);
             }else{
                 that.directionHor = 'right';
             }
@@ -61,9 +64,9 @@ function createBox(){
         if(that.directionHor == 'right'){
             if(!(that.left>775)){
                 //move right
-                that.left += 5;
+                that.left += randomFunction(1,6);
                 that.element.style.left = that.left +'px';
-                console.log(that.element.style.left);
+                // console.log(that.element.style.left);
             }else{
                 that.directionHor = 'left';
             }
@@ -71,9 +74,9 @@ function createBox(){
         if(that.directionVer == 'up'){
             if(!(that.top<5)){
                 //move up
-                that.top -= 5;
+                that.top -= randomFunction(1,6);
                 that.element.style.top = that.top +'px';
-                console.log(that.element.style.top);
+                (that.element.style.top);
             }else{
                 that.directionVer = 'down';
             }
@@ -82,9 +85,9 @@ function createBox(){
         if(that.directionVer == 'down'){
             if(!(that.top>475)){
                 //move down
-                that.top += 5;
+                that.top += randomFunction(1,6);
                 that.element.style.top = that.top +'px';
-                console.log(that.element.style.top);
+                // console.log(that.element.style.top);
             }else{
                 that.directionVer = 'up';
             }

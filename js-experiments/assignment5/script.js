@@ -106,7 +106,7 @@ function createNode(dataItem){
 
 }
 
-function node(parent){
+function Node(parent){
     var that = this;
     this.createNode = function(dataItem){
         var keys = Object.keys(dataItem);
@@ -128,7 +128,7 @@ function node(parent){
                 var childKeys = Object.keys(dataItem[keys[j]]);
                 for(var l = 0; l < childKeys.length; l++){
                     //create child
-                    var childNode = new node(that.container);
+                    var childNode = new Node(that.container);
                     childNode.createNode(dataItem[keys[j]][childKeys[l]]);
                 }
             }
@@ -139,6 +139,6 @@ function node(parent){
 
 var dataKeys = Object.keys(data);
 for(var i = 0; i<data.length; i++){
-    var newNode = new node(mainWrapper);
+    var newNode = new Node(mainWrapper);
     newNode.createNode(data[i]);
 }
