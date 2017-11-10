@@ -1,7 +1,7 @@
 var bdy = document.getElementsByTagName('body')[0];
 
 function initializeWorld(div){
-    this.element = document.getElementById(div)
+    this.element = document.getElementById(div);
     this.element.style.width = '600px';
     this.element.style.height = '600px';
     this.element.style.margin = 0;

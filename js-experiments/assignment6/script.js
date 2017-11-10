@@ -20,13 +20,30 @@ function CreateAnts(){
     this.element.height = 30;
     this.element.style.width = this.element.width + 'px';
     this.element.style.height = this.element.height + 'px';
-    this.element.style.backgroundColor = 'gray';
-    this.element.style.position = 'absolute'
+    // this.element.style.backgroundColor = 'gray';
+    this.element.style.backgroundImage = "url('ant1.png')";
+    this.element.style.backgroundSize = 'cover';
+    this.element.style.position = 'absolute';
     this.element.left = randomFunction(0,wide-this.element.width-5);
     this.element.top = randomFunction(0,tall-this.element.height-5);
     this.element.directionHor = this.directionListHorizontal[Math.floor(Math.random()*2)];
     this.element.directionVer = this.directionListVertical[Math.floor(Math.random()*2)];
     var that = this;
+
+    this.element.fadeOut = function(){
+        var fadeCounter = 1;
+        var interval = setInterval(function(){
+            // console.log('calling fadeout');
+            // console.log('fadeCounter value: ' + fadeCounter);
+            if(fadeCounter<=0){
+                // console.log('negative counter reached.');
+                mainWrapper.removeChild(that.element);
+                clearInterval(interval);
+            }
+            that.element.style.opacity = ""+fadeCounter;
+            fadeCounter -= 0.1;
+        },60);
+    }
 
     this.element.moveAnt = function(){
         //checkCollision
@@ -119,7 +136,7 @@ function startGame(){
              var index = antArray.indexOf(this);
              antArray.splice(index,1);
              console.log('no of ants: ' + antArray.length);
-             mainWrapper.removeChild(this);
+             this.fadeOut();
              if(antArray.length==0){
                  console.log('game-over');
                  messageDiv.innerText = 'Great Job !!!';
