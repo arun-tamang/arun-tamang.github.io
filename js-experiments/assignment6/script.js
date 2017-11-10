@@ -1,151 +1,158 @@
-var mainWrapper = document.getElementById('main-wrapper');
-var mainWrapper = document.getElementById('main-wrapper');
-var wide = 800;
-var tall = 500;
-mainWrapper.style.width = wide + 'px';
-mainWrapper.style.height = tall + 'px';
-mainWrapper.style.backgroundColor = 'rgb(252, 102, 102)';
-mainWrapper.style.position = 'relative';
 
 function randomFunction(a,b){
     return Math.ceil(a + Math.random()*(b-a));
 }
 
-function CreateAnts(){
+
+function createWorld(div){
+    this.element = document.getElementById(div);
+    this.wide = 800;
+    this.tall = 500;
+    this.element.style.width = this.wide + 'px';
+    this.element.style.height = this.tall + 'px';
+    this.element.style.backgroundColor = 'rgb(252, 102, 102)';
+    this.element.style.backgroundImage = 'url("ant-floor.png")';
+    this.element.style.backgroundSize = 'cover';
+    this.element.style.position = 'relative';
+
+    this.messageDiv = document.createElement('div');
+    this.element.appendChild(this.messageDiv);
+    this.messageDiv.style.fontSize = '40px';
+    this.messageDiv.style.color = 'rgb(48, 222, 180)';
+    this.messageDiv.style.position = 'absolute';
+    this.messageDiv.style.top = '40px';
+    this.messageDiv.style.left = '60px';
+    this.messageDiv.innerHTML = 'WELCOME !!';
+
+    var that = this;
+    this.startButton = document.createElement('button');
+    document.getElementsByTagName('body')[0].appendChild(this.startButton);
+    this.startButton.innerText = 'Start Game';
+    this.startButton.onclick = function(){
+        this.style.display = 'none';
+        that.messageDiv.style.display = 'none';
+        startGame();
+    }
+}
+
+function CreateAnts(parent){
     this.directionListHorizontal = [true, false];  // true=right and false = left
     this.directionListVertical = [true, false];  // true = up and false = down
     this.element = document.createElement('div');
-    mainWrapper.appendChild(this.element);
-    this.element.width = 30;
-    this.element.height = 30;
-    this.element.style.width = this.element.width + 'px';
-    this.element.style.height = this.element.height + 'px';
-    // this.element.style.backgroundColor = 'gray';
+    parent.element.appendChild(this.element);
+    this.width = 30;
+    this.height = 30;
+    this.element.style.width = this.width + 'px';
+    this.element.style.height = this.height + 'px';
     this.element.style.backgroundImage = "url('ant1.png')";
     this.element.style.backgroundSize = 'cover';
     this.element.style.position = 'absolute';
-    this.element.left = randomFunction(0,wide-this.element.width-5);
-    this.element.top = randomFunction(0,tall-this.element.height-5);
-    this.element.directionHor = this.directionListHorizontal[Math.floor(Math.random()*2)];
-    this.element.directionVer = this.directionListVertical[Math.floor(Math.random()*2)];
+    this.left = randomFunction(0,parent.wide-this.width-5);
+    this.top = randomFunction(0,parent.tall-this.height-5);
+    this.directionHor = this.directionListHorizontal[Math.floor(Math.random()*2)];
+    this.directionVer = this.directionListVertical[Math.floor(Math.random()*2)];
     var that = this;
 
-    this.element.fadeOut = function(){
+    this.fadeOut = function(){
+        that.element.onclick = function(){
+            return false;
+        }
         var fadeCounter = 1;
         var interval = setInterval(function(){
-            // console.log('calling fadeout');
-            // console.log('fadeCounter value: ' + fadeCounter);
             if(fadeCounter<=0){
-                // console.log('negative counter reached.');
-                mainWrapper.removeChild(that.element);
-                clearInterval(interval);
+                    clearInterval(interval);
+                    world.element.removeChild(that.element);
             }
             that.element.style.opacity = ""+fadeCounter;
             fadeCounter -= 0.1;
         },60);
     }
 
-    this.element.moveAnt = function(){
+    this.moveAnt = function(){
         //checkCollision
         for(var iterator=0; iterator<antArray.length; iterator++){
-            if(that.element == antArray[iterator]){
+            if(that == antArray[iterator]){
                 continue;
             }
-            if((that.element.left < antArray[iterator].left+antArray[iterator].width) &&
-              (that.element.left+that.element.width > antArray[iterator].left) &&
-              (that.element.top < antArray[iterator].top+antArray[iterator].height) &&
-              (that.element.top+that.element.height > antArray[iterator].top))
+            if((that.left < antArray[iterator].left+antArray[iterator].width) &&
+              (that.left+that.width > antArray[iterator].left) &&
+              (that.top < antArray[iterator].top+antArray[iterator].height) &&
+              (that.top+that.height > antArray[iterator].top))
             {
-                that.element.directionHor = !(that.element.directionHor);
-                that.element.directionVer = !(that.element.directionVer);
+                that.directionHor = !(that.directionHor);
+                that.directionVer = !(that.directionVer);
             }
         }
 
-        if(that.element.directionHor == false){
+        if(that.directionHor == false){
             //move left
-            if(!(that.element.left<1)){
-                that.element.left -= 1;
-                that.element.style.left = that.element.left + 'px';
+            if(!(that.left<1)){
+                that.left -= 1;
+                that.element.style.left = that.left + 'px';
             }else{
-                that.element.directionHor = true;
+                that.directionHor = true;
             }
         }
-        else if(that.element.directionHor == true){
-            if(!(that.element.left>wide-that.element.width-1)){
+        else if(that.directionHor == true){
+            if(!(that.left>parent.wide-that.width-1)){
                 //move right
-                that.element.left += 1;
-                that.element.style.left = that.element.left +'px';
+                that.left += 1;
+                that.element.style.left = that.left +'px';
             }else{
-                that.element.directionHor = false;
+                that.directionHor = false;
             }
         }
-        if(that.element.directionVer == true){
-            if(!(that.element.top<1)){
+        if(that.directionVer == true){
+            if(!(that.top<1)){
                 //move up
-                that.element.top -= 1;
-                that.element.style.top = that.element.top +'px';
+                that.top -= 1;
+                that.element.style.top = that.top +'px';
             }else{
-                that.element.directionVer = false;
+                that.directionVer = false;
             }
 
         }
-        else if(that.element.directionVer == false){
-            if(!(that.element.top>tall-that.element.height-1)){
+        else if(that.directionVer == false){
+            if(!(that.top>parent.tall-that.height-1)){
                 //move down
-                that.element.top += 1;
-                that.element.style.top = that.element.top +'px';
+                that.top += 1;
+                that.element.style.top = that.top +'px';
             }else{
-                that.element.directionVer = true;
+                that.directionVer = true;
             }
         }
 
     };
 }
 
-var messageDiv = document.createElement('div');
-mainWrapper.appendChild(messageDiv);
-messageDiv.style.fontSize = '40px';
-messageDiv.style.color = 'rgb(48, 222, 180)';
-messageDiv.style.position = 'absolute';
-messageDiv.style.top = '40px';
-messageDiv.style.left = '60px';
-messageDiv.innerHTML = 'WELCOME !!';
-
-
-var startButton = document.createElement('button');
-document.getElementsByTagName('body')[0].appendChild(startButton);
-startButton.innerText = 'Start Game';
-startButton.onclick = function(){
-    startButton.style.display = 'none';
-    messageDiv.style.display = 'none';
-    startGame();
-}
-
+var world = new createWorld('main-wrapper');
 
 var antArray = [];
+
 
 function startGame(){
     antArray = [];
     for(var i=0; i<Math.round(randomFunction(8,12)); i++){
-        var temp = new CreateAnts();
-        antArray[i] = temp.element;
-        antArray[i].style.top = randomFunction(50,750) + 'px';
-        antArray[i].style.left = randomFunction(50,450) + 'px';
-        mainWrapper.appendChild(antArray[i]);
-        antArray[i].onclick = function(){
-             var index = antArray.indexOf(this);
-             antArray.splice(index,1);
-             console.log('no of ants: ' + antArray.length);
-             this.fadeOut();
-             if(antArray.length==0){
-                 console.log('game-over');
-                 messageDiv.innerText = 'Great Job !!!';
-                 messageDiv.style.display = 'block';
-                 clearInterval(counterPromise);
-                 startButton.style.display  ='block';
-                 startButton.innerText = 'Play Again';
-             }
-        }
+        var ant = new CreateAnts(world);
+        antArray[i] = ant;
+        ant.element.style.top = randomFunction(50,750) + 'px';
+        ant.element.style.left = randomFunction(50,450) + 'px';
+        ant.element.onclick = function(_ant){
+            return function(){
+                var index = antArray.indexOf(_ant);
+                antArray.splice(index,1);
+                console.log('no of ants: ' + antArray.length);
+                _ant.fadeOut();
+                if(antArray.length==0){
+                    console.log('game-over');
+                    world.messageDiv.innerText = 'Great Job !!!';
+                    world.messageDiv.style.display = 'block';
+                    clearInterval(counterPromise);
+                    world.startButton.style.display  ='block';
+                    world.startButton.innerText = 'Play Again';
+                }
+            }
+        }(ant);
     }
     var counterPromise = setInterval(function(){
         for(var i = 0; i<antArray.length; i++){
