@@ -57,7 +57,7 @@ function initializeWorld(div){
     // console.log(this);
 
     // create car
-    this.carChild = new Car(secondWorld);
+    this.carChild = new Car(that);
 
     // this.obstacle = new Obstacle(this);
     // this.obstacle.giveNewPositionAndImage();
@@ -174,12 +174,10 @@ function Obstacle(parent){
   }
 }
 
-// var firstWorld = new initializeWorld('first-game-container');
-// var car1 = new Car(firstWorld);
+var firstWorld = new initializeWorld('first-game-container');
+firstWorld.init();
 var secondWorld = new initializeWorld('second-game-container');
 secondWorld.init();
-// var car2 = new Car(secondWorld);
-// var obstacle = new Obstacle(secondWorld);
 
 
 document.onkeydown = function(event){
@@ -200,17 +198,17 @@ document.onkeydown = function(event){
   }
   if(event.keyCode == 65){
       //move left
-      if(car1.left > 25){
-          car1.left -= 200;
-          car1.element.style.left = car1.left+'px';
+      if(firstWorld.carChild.left > 25){
+          firstWorld.carChild.left -= 200;
+          firstWorld.carChild.element.style.left = firstWorld.carChild.left+'px';
       }
 
   }
   if(event.keyCode == 68){
       //move right
-      if(car1.left !=400){
-          car1.left += 200;
-          car1.element.style.left = car1.left+'px';
+      if(firstWorld.carChild.left !=400){
+          firstWorld.carChild.left += 200;
+          firstWorld.carChild.element.style.left = firstWorld.carChild.left+'px';
       }
   }
 }
