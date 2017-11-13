@@ -4,7 +4,7 @@ function randomFunction(a,b){
 }
 
 
-function createWorld(div){
+function World(div){
     this.element = document.getElementById(div);
     this.wide = 800;
     this.tall = 500;
@@ -35,7 +35,7 @@ function createWorld(div){
     }
 }
 
-function CreateAnts(parent){
+function Ant(parent){
     this.directionListHorizontal = [true, false];  // true=right and false = left
     this.directionListVertical = [true, false];  // true = up and false = down
     this.element = document.createElement('div');
@@ -125,7 +125,7 @@ function CreateAnts(parent){
     };
 }
 
-var world = new createWorld('main-wrapper');
+var world = new World('main-wrapper');
 
 var antArray = [];
 
@@ -133,7 +133,7 @@ var antArray = [];
 function startGame(){
     antArray = [];
     for(var i=0; i<Math.round(randomFunction(8,12)); i++){
-        var ant = new CreateAnts(world);
+        var ant = new Ant(world);
         antArray[i] = ant;
         ant.element.style.top = randomFunction(50,750) + 'px';
         ant.element.style.left = randomFunction(50,450) + 'px';

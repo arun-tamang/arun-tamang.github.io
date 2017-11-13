@@ -7,7 +7,7 @@ mainWrapper.style.backgroundColor = 'rgb(252, 102, 102)';
 // console.log(mainWrapper.style.width);
 mainWrapper.style.position = 'relative';
 
-function createBox(){
+function Box(){
     this.directionListHorizontal = ['right','left'];
     this.directionListVertical = ['up','down'];
     this.element = document.createElement('div');
@@ -108,7 +108,7 @@ function randomFunction(a,b){
 }
 
 for(var i=0; i<randomFunction(10,15); i++){
-    var el = new createBox();
+    var el = new Box();
     el.element.style.top = randomFunction(4,276) + 'px';
     el.element.style.left = randomFunction(4,376) + 'px';
     mainWrapper.appendChild(el.element);

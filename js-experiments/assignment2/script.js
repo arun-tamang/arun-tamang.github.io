@@ -34,41 +34,49 @@ nxt.style.clear = 'both';
 var prev = document.createElement('button');
 prev.innerText = 'Previous';
 prev.style.clear = 'both';
+var buttonFlag = true;
 
 
 var slidingImages = document.getElementsByClassName('slidingImage');
 counter = 0;
 nxt.onclick = function(){
-    var counter1 = 1;
     if(counter<slidingImages.length-1){
+      if(buttonFlag){
+        buttonFlag = false;
+        var counter1 = 1;
         var counterPromise = setInterval(function(){
-            if(counter1>60){
-                clearInterval(counterPromise);
-                slidingImages[counter+1].style.marginRight = '0px';
-                counter++;
-                return;
-            }
-
-            slidingImages[counter].style.marginTop =-(counter1*10)+'px';
-            counter1++;
+          if(counter1>60){
+            clearInterval(counterPromise);
+            slidingImages[counter+1].style.marginRight = '0px';
+            counter++;
+            buttonFlag = true;
+            return;
+          }
+          slidingImages[counter].style.marginTop =-(counter1*10)+'px';
+          counter1++;
         }, 10);
+      }
     }
 }
 
 prev.onclick = function(){
-    if(counter>0){
-        console.log('previous is valid now.')
-        var counter1 = 1;
-        var counterPromise = setInterval(function(){
-            if(counter1>60){
-                clearInterval(counterPromise);
-                counter--;
-                return;
-            }
-            slidingImages[counter-1].style.marginTop = -((60-counter1)*10) +'px';
-            counter1++;
-        }, 10);
+  if(counter>0){
+    if(buttonFlag){
+      buttonFlag = false;
+      console.log('previous is valid now.')
+      var counter1 = 1;
+      var counterPromise = setInterval(function(){
+        if(counter1>60){
+          clearInterval(counterPromise);
+          counter--;
+          buttonFlag = true;
+          return;
+        }
+        slidingImages[counter-1].style.marginTop = -((60-counter1)*10) +'px';
+        counter1++;
+      }, 10);
     }
+  }
 }
 
 mainWrapper.appendChild(prev);

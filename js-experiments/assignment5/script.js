@@ -102,9 +102,7 @@ var data = [
 ];
 
 var mainWrapper = document.getElementById('main-wrapper');
-function createNode(dataItem){
 
-}
 
 function Node(parent){
     var that = this;

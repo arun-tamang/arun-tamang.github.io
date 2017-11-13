@@ -6,7 +6,7 @@ var details={
     profession: 'Programmer',
     Education: 'Bachelors in Electronics Engineering',
     hobbies: 'Singing',
-    projects: 'Speech-Recognition'
+    projects: ['Speech-Recognition', 'Autonomous Vehicle']
 }
 
 var mainWrapper = document.getElementById('main-wrapper');
@@ -26,11 +26,20 @@ var keyList = Object.keys(details);
 var key;
 for(var i=0; i<keyList.length; i++){
     var listItem = document.createElement('li');
-    /*you must create new li element and assign to new var each time.
-     it seems, if you perform appendChild with same variable it will replace value with new value of
-     the variable. This might be because you are assigning variable a reference to an li element
-     and since you only created li element once this same li will be referenced when you appendChild.*/
     key = keyList[i];
+    if(key == 'projects'){
+      listItem.innerHTML = key + ": <ul>";
+      console.log(details[key]);
+      for(var j = 0; j < details[key].length; j++){
+        listItem.innerHTML += '<li>' + details[key][j] + '</li>';
+        console.log(details[key][j]);
+      }
+      listItem.innerHTML += '</ul>'
+      listItem.style.textTransform = 'capitalize';
+      listItem.style.padding = '10px';
+      newList.appendChild(listItem);
+      continue;
+    }
     listItem.innerHTML = key + ": " + details[key];
     listItem.style.textTransform = 'capitalize';
     listItem.style.padding = '10px';
