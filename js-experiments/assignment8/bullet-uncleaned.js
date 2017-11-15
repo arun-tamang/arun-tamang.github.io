@@ -19,7 +19,6 @@ function World(div){
   this.numberOfLanes = 3;
   this.laneSelector = 0;
   this.numberOfObstacles = this.numberOfLanes - 1;
-  this.running = false;
 
   this.obstacleList = ['car1.jpg', 'car2.jpg', 'enemycar.png'];
   this.obstacles = [];
@@ -57,16 +56,20 @@ function World(div){
     // create car
     this.carChild = new Car(that);
     this.fire = function(){
+      // that.carChild.getBullet();
       this.carChild.bullets[this.carChild.bulletTracker].fireBullet();
+      // console.log('bulletTracker:' + this.carChild.bulletTracker)
       this.carChild.bulletTracker++;
 
+      // this.carChild.bullets.splice(0,1);
     }
+    // this.carChild.bullet = new Bullet(this.carChild);
+    // this.carChild.bullet.fireBullet();
 
     // initialize start button
     this.startButton.innerText = 'Start';
     bdy.appendChild(this.startButton);
     this.startButton.onclick = function(){
-      that.running = true;
       that.messageDiv.style.display = 'none';
       this.style.display = 'none';
       that.stopButton.style.display = 'block';
@@ -84,7 +87,7 @@ function World(div){
         for(var i = 0; i < (that.numberOfObstacles); i++) {
           // check collision
           if(checkCollision(that.obstacles[i], that.carChild)){
-            that.running = false;
+            // console.log('collision detected');
             that.messageDiv.innerHTML = 'GAME OVER';
             that.messageDiv.style.display = 'block';
             that.obstacles.forEach(function (item, index) {
@@ -100,6 +103,7 @@ function World(div){
           for(let j = 0; j < that.carChild.bullets.length; j++) {
             if(that.carChild.bullets[j].moveBullet == true) {
               if(checkCollision(that.obstacles[i], that.carChild.bullets[j])){
+                // console.log('bullet collision');
                 that.score ++;
                 that.obstacles[i].giveNewPositionAndImage();
                 that.carChild.bullets[j].resetBullet();
@@ -110,6 +114,7 @@ function World(div){
           that.obstacles[i].top += 2;
           that.obstacles[i].element.style.top = that.obstacles[i].top + 'px';
           if(that.obstacles[i].top > that.height){
+            // console.log('reached below');
             that.obstacles[i].giveNewPositionAndImage();
           }
         }
@@ -132,7 +137,6 @@ function World(div){
     this.stopButton.style.display = 'none';
     bdy.appendChild(this.stopButton);
     this.stopButton.onclick = function(){
-      that.running = false;
       that.startButton.style.display = 'block';
       this.style.display = 'none'
       clearInterval(that.counterPromise);
@@ -167,6 +171,9 @@ function Car(parent){
 
   var that = this;
 
+  // this.getBullet = function() {
+  //   that.bullet = new Bullet();
+  // }
 }
 
 function Obstacle(parent){
@@ -244,53 +251,42 @@ secondWorld.init();
 
 document.onkeyup = function(event){
   if(event.keyCode == 37){
-    //move left
-    if(secondWorld.carChild.left > 25){
-      if(secondWorld.running == true) {
-        secondWorld.carChild.left -= 200;
-        secondWorld.carChild.element.style.left = secondWorld.carChild.left+'px';
+      //move left
+      if(secondWorld.carChild.left > 25){
+          secondWorld.carChild.left -= 200;
+          secondWorld.carChild.element.style.left = secondWorld.carChild.left+'px';
       }
-    }
+
   }
   if(event.keyCode == 39){
-    //move right
-    if(secondWorld.carChild.left < 400){
-      if(secondWorld.running == true) {
-        secondWorld.carChild.left += 200;
-        secondWorld.carChild.element.style.left = secondWorld.carChild.left+'px';
+      //move right
+      if(secondWorld.carChild.left < 400){
+          secondWorld.carChild.left += 200;
+          secondWorld.carChild.element.style.left = secondWorld.carChild.left+'px';
       }
-    }
   }
   if(event.keyCode == 38){
-    //fire on pressing up arrow key
-    if(secondWorld.running == true) {
+      //fire on pressin up arrow key
       secondWorld.fire();
-    }
   }
 
 
   if(event.keyCode == 65){
-    //move left
-    if(firstWorld.carChild.left > 25){
-      if(firstWorld.running == true){
-        firstWorld.carChild.left -= 200;
-        firstWorld.carChild.element.style.left = firstWorld.carChild.left+'px';
+      //move left
+      if(firstWorld.carChild.left > 25){
+          firstWorld.carChild.left -= 200;
+          firstWorld.carChild.element.style.left = firstWorld.carChild.left+'px';
       }
-    }
   }
   if(event.keyCode == 68){
-    //move right
-    if(firstWorld.carChild.left < 400){
-      if(firstWorld.running == true) {
-        firstWorld.carChild.left += 200;
-        firstWorld.carChild.element.style.left = firstWorld.carChild.left+'px';
+      //move right
+      if(firstWorld.carChild.left < 400){
+          firstWorld.carChild.left += 200;
+          firstWorld.carChild.element.style.left = firstWorld.carChild.left+'px';
       }
-    }
   }
   if(event.keyCode == 87){
-    //fire on pressing 'w'
-    if(firstWorld.running == true){
+      //fire on pressing 'w'
       firstWorld.fire();
-    }
   }
 }
