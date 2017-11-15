@@ -26,7 +26,7 @@ function AnimationWorld(){
   this.topPadding = 200;
   this.leftPadding = 150;
   this.phase = 0;
-  this.speed = 0.03;
+  this.speed = 0.005;
   this.frameCount = 0;
   this.numberOfMatrices = 2;
 
