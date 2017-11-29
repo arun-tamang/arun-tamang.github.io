@@ -101,7 +101,7 @@ class StripedLineAnimation {
       'rgba(255, 227, 255, 1)', 'rgba(255, 227, 255, 0)',
       'rgba(255, 236, 255, 1)', 'rgba(255, 236, 255, 0)'];
     } else if(this.type == 4) {
-      this.color = ['rgba(#12c2ff, 1)', 'rgba(#12c2ff, 0)',
+      this.color = ['rgba(18, 194, 255, 1)', 'rgba(18, 194, 255, 0)',
       'rgba(30, 176, 252, 1)', 'rgba(30, 176, 252, 0)',
       'rgba(0, 76, 187, 1)', 'rgba(0, 76, 187, 0)',
       'rgba(214, 248, 255, 1)', 'rgba(214, 248, 255, 0)',
@@ -164,7 +164,7 @@ class StripedLineAnimation {
     }
     // height = 8;
     // this.context.shadowColor = grd;
-    this.context.shadowBlur = 15 ;
+    this.context.shadowBlur = 20 ;
     this.context.beginPath();
     this.context.moveTo(x1, y1);
     this.context.lineTo(x2, y2);
@@ -494,6 +494,8 @@ class CandyZone {
 
     this.stripeEffect = false;
     this.stripedAnimationList = [];
+
+    this.fadeCandyList = [];
   }
 
   getRandomTiles() {
@@ -607,6 +609,31 @@ class CandyZone {
     let beginY = this.y + tile.row * this.tileHeight;
     this.clearRegion(beginX, beginY, this.tileWidth, this.tileHeight);
     ctx.drawImage(img, beginX + 2, beginY + 2, this.tileWidth -4, this.tileHeight - 4);
+  }
+
+  fadeCandy(tile, img, alpha) {
+    // let img = this.loadedImages[tile.type];
+    let beginX = this.x + tile.column * this.tileWidth;
+    let beginY = this.y + tile.row * this.tileHeight;
+    this.clearRegion(beginX, beginY, this.tileWidth, this.tileHeight);
+    ctx.save();
+    ctx.globalAlpha = alpha;
+    ctx.drawImage(img, beginX + 2, beginY + 2, this.tileWidth -4, this.tileHeight - 4);
+    ctx.restore();
+  }
+
+  fadeMultipleCandies(alpha) {
+    // ctx.save();
+    // ctx.globalAlpha = alpha;
+    for(let i = this.fadeCandyList.length - 1; i >= 0; i--) {
+      if(this.fadeCandyList[i][1] == -1) {
+        this.fadeCandyList.splice(i,1);
+      } else {
+        let img = this.loadedImages[this.fadeCandyList[i][1]];
+        this.fadeCandy(this.fadeCandyList[i][0], img, alpha);
+      }
+    }
+    // ctx.restore();
   }
 
   clearCandy(tile) {
@@ -745,8 +772,11 @@ class CandyZone {
                 // Also you need to draw striped candy just like above.
                 this.drawStaticCandy(this.tiles[rowValue][index - 1]);
                 // finally change the last tile's type to -1.
+                this.fadeCandyList.pop();
+                this.fadeCandyList.push([this.tiles[rowValue][index], this.tiles[rowValue][index].type]);
                 this.tiles[rowValue][index].type = -1;
               } else {
+                this.fadeCandyList.push([this.tiles[rowValue][index], this.tiles[rowValue][index].type]);
                 this.tiles[rowValue][index].type = -1;
               }
             }
@@ -762,12 +792,20 @@ class CandyZone {
                 // Also you need to draw striped candy just like above.
                 this.drawStaticCandy(this.tiles[rowValue][index - 1]);
                 // finally change the last tile's type to -1.
+                this.fadeCandyList.pop();
+                this.fadeCandyList.push([this.tiles[rowValue][index], this.tiles[rowValue][index].type]);
+                // by adding fadeCandyList, now you have to remove (rowValue, index-1) tile from fadeCandyList
+                // or else special candy will be overriden by fading non-striped candy.
                 this.tiles[rowValue][index].type = -1;
               } else {
+                this.fadeCandyList.push([this.tiles[rowValue][index], this.tiles[rowValue][index].type]);
                 this.tiles[rowValue][index].type = -1;
               }
             }
           } else {
+            if(this.gameState != 'initial') {
+              this.fadeCandyList.push([this.tiles[rowValue][index], this.tiles[rowValue][index].type]);
+            }
             this.tiles[rowValue][index].type = -1;
           }
         }
@@ -798,8 +836,10 @@ class CandyZone {
                 // none of the tiles in length 4 match were in current move so insert striped at third position
                 this.tiles[index - 1][colValue].type = this.tiles[index][colValue].type + 6;
                 this.drawStaticCandy(this.tiles[index - 1][colValue]);
+                this.fadeCandyList.push([this.tiles[index][colValue], this.tiles[index][colValue].type]);
                 this.tiles[index][colValue].type = -1;
               } else {
+                this.fadeCandyList.push([this.tiles[index][colValue], this.tiles[index][colValue].type]);
                 this.tiles[index][colValue].type = -1;
               }
             }
@@ -815,12 +855,17 @@ class CandyZone {
                 // Also you need to draw striped candy just like above.
                 this.drawStaticCandy(this.tiles[index - 1][colValue]);
                 // finally change the last tile's type to -1.
+                this.fadeCandyList.push([this.tiles[index][colValue], this.tiles[index][colValue].type]);
                 this.tiles[index][colValue].type = -1;
               } else {
+                this.fadeCandyList.push([this.tiles[index][colValue], this.tiles[index][colValue].type]);
                 this.tiles[index][colValue].type = -1;
               }
             }
           } else {
+            if(this.gameState != 'initial') {
+              this.fadeCandyList.push([this.tiles[index][colValue], this.tiles[index][colValue].type]);
+            }
             this.tiles[index][colValue].type = -1;
           }
         }
@@ -1043,6 +1088,9 @@ class CandyZone {
     for(let i = 0; i < this.numRows; i++) {
       for(let j = 0; j < this.numCols; j++) {
         if(this.tiles[i][j].type == thisType) {
+          if(this.gameState != 'initial') {
+            this.fadeCandyList.push([this.tiles[i][j], this.tiles[i][j].type]);
+          }
           this.tiles[i][j].type = -1;
           // this.lightningTiles.push(this.tiles[i][j]);
           let coordinate = this.getTileCoordinates(this.tiles[i][j]);
@@ -1059,6 +1107,9 @@ class CandyZone {
         // this.removeColumn(i);
         this.activateStriped(this.tiles[row][i]);
       } else {
+        if(this.gameState != 'initial') {
+          this.fadeCandyList.push([this.tiles[row][i], this.tiles[row][i].type]);
+        }
         this.tiles[row][i].type = -1;
       }
     }
@@ -1071,6 +1122,9 @@ class CandyZone {
         // this.removeRow(j);
         this.activateStriped(this.tiles[j][column]);
       } else {
+        if(this.gameState != 'initial') {
+          this.fadeCandyList.push([this.tiles[j][column], this.tiles[j][column].type]);
+        }
         this.tiles[j][column].type = -1;
       }
     }
@@ -1110,6 +1164,9 @@ class CandyZone {
     }
     this.pauseTiles = true;
     // finally remove current striped tile as it won't be activateStriped
+    if(this.gameState != 'initial') {
+      this.fadeCandyList.push([tile, tile.type]);
+    }
     tile.type = -1;
   }
 
@@ -1139,6 +1196,7 @@ class CandyZone {
   destroyAllCandies() {
     for(let i = 0; i < this.numRows; i++) {
       for(let j = 0; j < this.numCols; j++) {
+        this.fadeCandyList.push([this.tiles[i][j], this.tiles[i][j].type]);
         this.tiles[i][j].type = -1;
       }
     }
@@ -1152,6 +1210,7 @@ class CandyZone {
   // }
 
   activateColorBomb(bombTile, otherTile) {
+    this.fadeCandyList.push([bombTile, bombTile.type]);
     bombTile.type = -1;
     // Now check if another candy is normal candy
     if((0 <= otherTile.type) && (otherTile.type <= 5)) {
@@ -1662,12 +1721,18 @@ class GameWorld {
     //   this.pauseCounter = 0;
     //   return;
     // }
-    if((this.dt / 1000) > 0.3) {
+
+    if((this.dt / 1000) >= 1) {
       this.playArea.pauseTiles = false;
+      this.playArea.fadeCandyList = [];
       this.lastInstance = 0;
       this.pauseCounter = 0;
       this.dt = 0;
     }
+
+    let alpha = 1 - this.dt / 1000;
+    this.playArea.fadeMultipleCandies(alpha);
+
   }
 
   animateLightning(time) {
