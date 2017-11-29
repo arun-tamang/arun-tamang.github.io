@@ -254,6 +254,27 @@ class SpecialEffects {
     this.parent = parent;
   }
 
+  drawScore(i, j, score, dx, dy) {
+    let cor = this.parent.playArea.getTileCoordinates(this.parent.playArea.tiles[i][j]);
+    let wide = this.context.measureText(score).width;
+    let size = 40;
+    this.context.font = size + 'px Berkshire Swash';
+    this.context.fillStyle = 'rgb(254, 11, 11)';
+    this.context.shadowColor = 'rgb(203, 3, 3)';
+    this.context.shadowBlur = 15;
+    this.context.fillText(score, cor.x - (wide / 2) + dx, cor.y + (size / 2) + dy);
+  }
+
+  drawFloatingScores(alpha, dt) {
+    this.clearEffects();
+    for(let i = 0; i < this.parent.playArea.scoresToDraw.length; i++) {
+      this.context.save();
+      this.context.globalAlpha = alpha;
+      this.drawScore(this.parent.playArea.scoresToDraw[i][0], this.parent.playArea.scoresToDraw[i][1], this.parent.playArea.scoresToDraw[i][2], 0 , - (dt/15));
+      this.context.restore();
+    }
+  }
+
   createLineAnimation(xCor,yCor, horizontal, type) {
     let endLeft = this.parent.playArea.x;
     let endRight = this.parent.playArea.x + this.parent.playArea.width;
@@ -496,6 +517,12 @@ class CandyZone {
     this.stripedAnimationList = [];
 
     this.fadeCandyList = [];
+
+    this.scoreLightning = false;
+    this.scoreStriped = false;
+    this.stripesToScore = 0;
+
+    this.scoresToDraw = [];
   }
 
   getRandomTiles() {
@@ -743,6 +770,16 @@ class CandyZone {
       if(this.matches[i].horizontal == true) {
         let limit = this.matches[i].column + this.matches[i].length;
         let rowValue = this.matches[i].row;
+        // push in scoresToDraw to display floating numbers inside the CandyZone
+        if(this.matches[i].length == 3 && this.gameState != 'initial') {
+          this.scoresToDraw.push([rowValue, limit - 2, '60']);
+        } else if(this.matches[i].length == 4 && this.gameState != 'initial') {
+          this.scoresToDraw.push([rowValue, limit - 3, '120']);
+        } else if(this.matches[i].length >= 5 && this.gameState != 'initial') {
+          let matchLen = this.matches[i].length;
+          let score = (matchLen) * (matchLen - 1) * 10;
+          this.scoresToDraw.push([rowValue, limit - Math.round(matchLen / 2) - 1, score + '']);
+        }
         for(let index = (this.matches[i].column); index < limit; index ++) {
           // if you want different result in 4 matches with already striped candy, you'll have
           // to move below two if conditions inside if(length==4) and other conditions for other
@@ -814,6 +851,15 @@ class CandyZone {
         // this is vertical match
         let limit = this.matches[i].row + this.matches[i].length;
         let colValue = this.matches[i].column;
+        if(this.matches[i].length == 3 && this.gameState != 'initial') {
+          this.scoresToDraw.push([limit - 2, colValue, '60']);
+        } else if(this.matches[i].length == 4 && this.gameState != 'initial') {
+          this.scoresToDraw.push([limit - 3, colValue, '120']);
+        } else if(this.matches[i].length >= 5 && this.gameState != 'initial') {
+          let matchLen = this.matches[i].length;
+          let score = (matchLen) * (matchLen - 1) * 10;
+          this.scoresToDraw.push([limit - Math.round(matchLen / 2) - 1, colValue, score + '']);
+        }
         for(let index = (this.matches[i].row); index < limit; index ++) {
           if((6 <= this.tiles[index][colValue].type) && (this.tiles[index][colValue].type <= 11)) {
             this.activateStriped(this.tiles[index][colValue]);
@@ -1155,6 +1201,7 @@ class CandyZone {
           }
           this.drawStaticCandy(this.tiles[i][j]);
           // this.activateStriped(this.tiles[i][j]);
+          // this.stripesToScore++;
           this.stripesToActivate.push(this.tiles[i][j]);
         }
       }
@@ -1171,6 +1218,8 @@ class CandyZone {
   }
 
   activateStriped(tile) {
+    this.scoreStriped = true;
+    this.stripesToScore++;
     if((6 <= tile.type) && (tile.type <= 11)) {
       let typ = tile.type;
       //horizontal striped candy. remove all candies in this row
@@ -1218,6 +1267,7 @@ class CandyZone {
       this.removeType(otherTile);
       // this.prepareForLightning();
       this.lightningEffect = true;
+      this.scoreLightning = true;
     } else if((6 <= otherTile.type) && (otherTile.type<= 17)) {
       console.log('swapped with striped');
       this.replaceWithStriped(otherTile);
@@ -1257,20 +1307,63 @@ class CandyZone {
       } else if(((6 <= tile1.type) && (tile1.type <= 17)) && ((6 <= tile2.type) && (tile2.type <= 17))) {
         // both are striped candies
         if(((6 <= tile1.type) && (tile1.type <= 11)) && ((12 <= tile2.type) && (tile2.type <= 17))) {
-          this.removeRow(tile1.row);
-          this.removeColumn(tile2.column);
+          this.activateStriped(tile1);
+          this.activateStriped(tile2);
         } else if(((6 <= tile2.type) && (tile2.type <= 11)) && ((12 <= tile1.type) && (tile1.type <= 17))) {
-          this.removeRow(tile2.row);
-          this.removeColumn(tile1.column);
+          this.activateStriped(tile1);
+          this.activateStriped(tile2);
         } else {
           // if both of same stripe-direction randomly remove row and column
           let choose = Math.floor(Math.random() * 2); // generate 0 or 1
           if(choose == 0) {
+            let typ1 = tile1.type;
+            let typ2 = tile2.type;
+            if(typ1 >=12) {
+              typ1 = typ1 - 12;
+              // also need to change type of striped candy so extra row or column doesn't blow up.
+              tile1.type -= 6;
+            } else if((6 <= typ1) && (typ1 <=11)) {
+              typ1 = typ1 - 6;
+            }
+            //horizontal striped candy. remove all candies in this row
             this.removeRow(tile1.row);
+            this.stripeEffect = true;
+            let coordinate = this.getTileCoordinates(tile1);
+            this.stripedAnimationList.push({point: coordinate, horizontal: true, type: typ1});
+            if(typ2 >=12) {
+              typ2 = typ2 - 12;
+            } else if((6 <= typ2) && (typ2 <=11)) {
+              tile2.type += 6;
+              typ2 = typ2 - 6;
+            }
+            // vertical striped candy.
             this.removeColumn(tile2.column);
+            this.stripeEffect = true;
+            coordinate = this.getTileCoordinates(tile2);
+            this.stripedAnimationList.push({point: coordinate, horizontal: false, type: typ2});
           } else {
+            let typ2 = tile2.type;
+            let typ1 = tile1.type;
+            if(typ2 >=12) {
+              tile2.type -= 6;
+              typ2 = typ2 - 12;
+            } else if((6 <= typ2) && (typ2 <=11)) {
+              typ2 = typ2 - 6;
+            }
             this.removeRow(tile2.row);
+            this.stripeEffect = true;
+            let coordinate = this.getTileCoordinates(tile2);
+            this.stripedAnimationList.push({point: coordinate, horizontal: true, type: typ2});
+            if(typ1 >=12) {
+              typ1 = typ1 - 12;
+            } else if((6 <= typ1) && (typ1 <=11)) {
+              tile1.type += 6;
+              typ1 = typ1 - 6;
+            }
             this.removeColumn(tile1.column);
+            this.stripeEffect = true;
+            coordinate = this.getTileCoordinates(tile1);
+            this.stripedAnimationList.push({point: coordinate, horizontal: false, type: typ1});
           }
         }
         this.firstSwap = true;
@@ -1563,17 +1656,27 @@ class GameWorld {
     // console.log(text);
   }
 
-  updateScore() {
-
-    if(this.playArea.lightningEffect == true) {
-      this.score += 300;
-      for(let i = 0; i < this.playArea.numRows; i++) {
-        for(let j = 0; j < this.playArea.numCols; j++) {
-          if(this.playArea.tiles[i][j].type == -1) {
-            this.score += 60;
-          }
+  scoreAllRemoved() {
+    for(let i = 0; i < this.playArea.numRows; i++) {
+      for(let j = 0; j < this.playArea.numCols; j++) {
+        if(this.playArea.tiles[i][j].type == -1) {
+          this.score += 60;
         }
       }
+    }
+  }
+
+  updateScore() {
+
+    if(this.playArea.scoreLightning == true) {
+      this.score += 300;
+      this.scoreAllRemoved();
+      this.playArea.scoreLightning = false;
+    } else if(this.playArea.scoreStriped == true) {
+      this.score += 100 * this.playArea.stripesToScore;
+      this.scoreAllRemoved();
+      this.playArea.scoreStriped = false;
+      this.playArea.stripesToScore = 0;
     } else {
       for(let i = 0; i < this.playArea.matches.length; i++) {
         let matchLen = this.playArea.matches[i].length;
@@ -1675,6 +1778,9 @@ class GameWorld {
       }
 
       if((this.playArea.pauseTiles == true) && (this.playArea.lightningEffect == false) && (this.playArea.stripeEffect == false)) {
+        if(this.upCanvasPresent == false) {
+          this.appendCanvas();
+        }
         this.pauseForAnimation(time);
       }
 
@@ -1725,6 +1831,8 @@ class GameWorld {
     if((this.dt / 1000) >= 1) {
       this.playArea.pauseTiles = false;
       this.playArea.fadeCandyList = [];
+      this.playArea.scoresToDraw = [];
+      this.removeCanvas();
       this.lastInstance = 0;
       this.pauseCounter = 0;
       this.dt = 0;
@@ -1732,6 +1840,8 @@ class GameWorld {
 
     let alpha = 1 - this.dt / 1000;
     this.playArea.fadeMultipleCandies(alpha);
+
+    this.spEffect.drawFloatingScores(alpha * 1.5, this.dt);
 
   }
 
@@ -1751,7 +1861,7 @@ class GameWorld {
       this.dt = 0;
       this.pauseCounter = 0;
       this.lastInstance = 0;
-      this.updateScore();
+      // this.updateScore();
       this.playArea.lightningEffect = false;
       this.playArea.lightningTileCoordinates = [];
       this.removeCanvas();
