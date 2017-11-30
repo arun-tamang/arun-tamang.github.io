@@ -3,19 +3,8 @@
   padding: 0;
 }
 
-/*@font-face {
-  font-family: 'Candice';
-  src: url('http://www.fontsaddict.com/fontface/candice.TTF');
-}*/
-/*
-@font-face {font-family:"Candice";
-src:url("./CANDY.eot") format("eot"),url("./CANDY.woff") format("woff"),url("./CANDY.ttf") format("truetype"),url("./CANDY.svg#Candice") format("svg");
-font-weight:normal;font-style:normal;}*/
-
 canvas {
-	/*font-family: 'Berkshire Swash', cursive;*/
-  /*background-color: red;*/
-  font-family: 'Atomic Age', cursive;
+	font-family: 'Berkshire Swash', cursive;
 }
 
 #main-wrapper{

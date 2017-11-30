@@ -64,7 +64,7 @@ button{
 }
 
 .header-top .header-top-container .header-menus li:hover{
-	float: left;
+	/*float: left;*/
 	background-image: url('../images/header-menu-hover.png');
 	background-size: 100% 100%;
 }
@@ -95,6 +95,18 @@ button{
 	height: 15px;
 	margin-bottom: 9px;
 	cursor: pointer;
+	position: relative;
+}
+
+.header-top .header-top-container .header-menus li.search-container{
+	position: relative;
+}
+
+.header-top .header-top-container .header-menus li #search-input{
+	top: 30px;
+	right: 0px;
+	position: absolute;
+	display: none;
 }
 
 .header-top .header-top-container .header-menus li span.down-arrow{
@@ -113,6 +125,27 @@ button{
 .header-top .header-top-container ul.header-menus li.dropdown{
 	margin-left: 0px;
 	margin-right: -4px;
+	position: relative;
+	margin-bottom: 0px;
+}
+
+.header-top .header-top-container ul.header-menus li.dropdown .dropdown-content{
+	z-index: 1;
+	/*float: none;*/
+	background-color: #76c7c0;
+	position: absolute;
+	top: 28px;
+	left: 0px;
+	display: none;
+}
+.header-top .header-top-container ul.header-menus li.dropdown .dropdown-content li{
+	float: none;
+	display: block;
+	margin: 0px;
+	width: 130px;
+}
+.header-top .header-top-container ul.header-menus li.dropdown:hover .dropdown-content{
+	display: block;
 }
 
 .header-top .header-top-container ul.header-menus li.dropdown a{
@@ -195,12 +228,39 @@ button{
 
 .body-container .text-slider-container{
 	margin-bottom: 50px;
+	overflow: hidden;
+	/*position: relative;*/
+}
+
+.body-container .text-slider-container .list-container{
+	width: 85%;
+	float: left;
+	overflow: hidden;
 }
 
 .body-container .text-slider-container ul{
 	list-style: none;
 	float: left;
+	position: relative;
+	width: 100%;
+	height: 40px;
 }
+
+.body-container .text-slider-container ul li{
+	list-style: none;
+	float: left;
+	position: absolute;
+	max-width: 100%;
+	width: 100%;
+}
+
+.body-container .text-slider-container ul li.sliding-text{
+	max-width: 100%;
+  float:left;
+  list-style: none;
+	position: absolute;
+}
+
 
 .body-container .text-slider-container ul li.sliding-text h2{
 	font-family: 'Open Sans', sans-serif;
@@ -215,19 +275,7 @@ button{
 	float: right;
 }
 
-.body-container .text-slider-container .right-buttons .previous{
-	background-image: url('../images/button-left.png');
-	background-size: 100% 100%;
-	width: 40px;
-	height: 40px;
-	border: none;
-}
-
-.body-container .text-slider-container .right-buttons .previous:hover{
-	background-image: url('../images/button-left-hover.png');
-}
-
-.body-container .text-slider-container .right-buttons .next{
+.body-container .text-slider-container .right-buttons .previous-text{
 	background-image: url('../images/button-right.png');
 	background-size: 100% 100%;
 	width: 40px;
@@ -236,23 +284,45 @@ button{
 	margin-left: 16px;
 }
 
-.body-container .text-slider-container .right-buttons .next:hover{
+.body-container .text-slider-container .right-buttons .previous-text:hover{
 	background-image: url('../images/button-right-hover.png');
 }
 
+.body-container .text-slider-container .right-buttons .next-text{
+	background-image: url('../images/button-left.png');
+	background-size: 100% 100%;
+	width: 40px;
+	height: 40px;
+	border: none;
+}
+
+.body-container .text-slider-container .right-buttons .next-text:hover{
+	background-image: url('../images/button-left-hover.png');
+}
+
 .body-container .image-slider-container{
+	overflow: hidden;
 	position: relative;
+	border-radius: 8px;
 }
 
 .body-container .image-slider-container ul.images{
+	width: 100%;
 	list-style: none;
-	height: 703px;/*3px extra for image frame*/
+	height: 703px; /*3px extra for image frame*/
+	position: relative;
+	border-radius: 8px;
+	overflow:hidden;
 }
 
 .body-container .image-slider-container ul.images li{
+	float: left;
 	width: 100%;
+	max-width: 100%;
 	height: 700px;
-	border-radius: 8px;
+	position: absolute;
+	/*border-radius: 8px;*/
+	overlfow:hidden;
 }
 
 .body-container .image-slider-container ul.images li img{

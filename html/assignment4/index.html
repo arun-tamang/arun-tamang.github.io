@@ -22,12 +22,21 @@
 						<li><a href="#" target="_blank">home</a></li>
 						<li><a href="#" target="_blank">about</a></li>
 						<li><a href="#" target="_blank">services</a></li>
-						<li class='dropdown'><span class='down-arrow'></span><a href="#" target="_blank">portfolio</a></li>
+						<li class='dropdown'>
+							<span class='down-arrow'></span>
+							<a href="#" target="_blank">portfolio</a>
+							<ul class="dropdown-content">
+								<li><a href="#" target="_blank">link1</a></li>
+								<li><a href="#" target="_blank">link2</a></li>
+								<li><a href="#" target="_blank">link3</a></li>
+							</ul>
+						</li>
 						<li><a href="#" target="_blank">blog</a></li>
 						<li><a href="#" target="_blank">features</a></li>
 						<li><a href="#" target="_blank">contacts</a></li>
-						<li>
-							<span class='header-search'></span>
+						<li class="search-container">
+							<span onclick="handlers.toggleInput()" class="header-search"></span>
+							<input type="text" id="search-input"/>
 						</li>
 					</ul>
 				</div>
@@ -47,27 +56,29 @@
 		<div class='body-wrapper'>
 			<div class='body-container'>
 				<div class='text-slider-container clearfix'>
-					<ul>
-						<li class='sliding-text'>
-							<h2>Donec faucibus ultricies congue</h2>
-						</li>
-						<li class='sliding-text hidden'>
-							<h2>Additional texts</h2>
-						</li>
-						<li class='sliding-text hidden'>
-							<h2>Some more texts.</h2>
-						</li>
-					</ul>
+					<div class="list-container">
+						<ul class="sliding-text-container clearfix">
+							<li class='sliding-text'>
+								<h2>Donec faucibus ultricies congue</h2>
+							</li>
+							<li class='sliding-text'>
+								<h2>Additional texts</h2>
+							</li>
+							<li class='sliding-text'>
+								<h2>Some more texts.</h2>
+							</li>
+						</ul>
+					</div>
 					<div class='right-buttons'>
-						<button class='previous'></button>
-						<button class='next'></button>
+						<button class='next-text'></button>
+						<button class='previous-text'></button>
 					</div>
 				</div>
 				<div class='image-slider-container'>
-					<ul class='images'>
-						<li class='hidden'><img src='images/slide-image-1.jpg' alt='image'></li>
-						<li><img src='images/slide-image-2.jpg' alt='image'></li>
-						<li class='hidden'><img src='images/slide-image-3.jpg' alt='image'></li>
+					<ul class='images clearfix'>
+						<li class='sliding-images'><img src='images/slide-image-1.jpg' alt='image'></li>
+						<li class="sliding-images"><img src='images/slide-image-2.jpg' alt='image'></li>
+						<li class='sliding-images'><img src='images/slide-image-3.jpg' alt='image'></li>
 					</ul>
 					<button class='prev-image'></button>
 					<button class='next-image'></button>
@@ -242,5 +253,6 @@
 
 		</div>
 	</div>
+	<script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
