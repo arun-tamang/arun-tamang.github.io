@@ -96,6 +96,7 @@ var imageChildren = imageList.children;
 var imageWidth = imageChildren[0].offsetWidth;
 // imageList.style.width = parseInt(imageWidth * imageChildren.length) + 'px';
 // slider(ul);
+var categoryLength = 3;
 
 for(var i = 0; i < imageChildren.length; i++) {
   imageChildren[i].style.left = i * imageWidth + 'px';
@@ -107,7 +108,7 @@ var imageButtonFlag = true;
 var currentImage = 0;  // keep track of current image
 
 prevImage.onclick = function() {
-  if(currentImage<imageChildren.length-1){
+  if(currentImage < (currentText+1) * categoryLength){
     if(imageButtonFlag){
       imageButtonFlag = false;
       var counter2 = 1;
@@ -134,7 +135,7 @@ prevImage.onclick = function() {
 }
 
 nextImage.onclick = function() {
-  if(currentImage > 0){
+  if(currentImage > (currentText) * categoryLength)){
     if(imageButtonFlag){
       imageButtonFlag = false;
       var counter2 = 1;
